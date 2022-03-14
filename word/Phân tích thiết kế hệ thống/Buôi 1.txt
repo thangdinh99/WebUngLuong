@@ -1,0 +1,57 @@
+ hệ thống 7 đặc điểm :
+đường biên,phần tử,quan hệ,môi trường,đầu vào,đầu ra,giao diện
+
+VD : máy giặt
+phần tử : lồng giặt,nút bấm,... 
+quan hệ : cung cấp điện,nước,để hoạt động
+biên : vỏ máy
+đầu vào-ra : cửa lồng,nút bấm,chỗ nước vào,nước giặt ,ống xả nước
+môi trường : không khí
+giao diện : nút bấm,màn hình 
+
+-Mục đích : đầu ra có trước (là mục đích)
+-VD về hđ và tiến triển HT bán hàng : 
++hđ : lập đơn hàng,bán hàng
++tiến triển  : có ít mặt hàng,xong nhiều hơn
+
+-hệ thống kinh doanh : 
++Cty sx : tự bán(vinamilk),tự mở cửa hàng(độc quyền)
++Cty cung cấp dv : phân phối sp ra các cửa hàng,1 cửa hàng có thể phân phối nhiều sp
+-hệ thống dịch vụ : ql điểm,ql nhân sự,ql lương,ql thuốc,khám chữa bệnh
+
+-VD : hệ con
++tác nghiệp : phòng ban quản lý,khoa mta
++thông tin :
++quyết định : 
+
+C8 :
+-nhận tt : có khuôn mẫu 
+vd : mẫu biểu kê khai
+-xử lý :thêm sửa xóa update tính toán
+-lưu trữ : dạng dữ liệu 
++âm thanh
++hình ảnh,...
+-đưa ra tt : có khuôn mẫu 
+vd:hóa đơn bán hàng,báo cáo
+
+C9 : So sánh pp 2 luận
+- Cấu trúc : hệ thống nhỏ và TB
+- hđt : Lớn
+
+C10 : phân tích vòng đời ptht,pha,cột mốc ?
+- từ 1-5 là httt
+- cột mốc : dữ liệu đầu ra-vào,thông tin đầu ra-vào tương ứng với mỗi pha
+
+C11 : phân tích giai đoạn chính trong quá trình pttkht,đầu vào đầu ra từng giai đoạn
+- gồm 3 pha đầu tiên : khởi tạo,phân tích,thiết kế.
+- bảng vàng là đầu ra của bảng xanh. và là đầu vào của bảng tiếp theo
+-đầu vào là dữ liệu,yêu cầu khách hàng.
+- đầu ra phân tích : bản vẽ giao diện,dữ liệu,kiến trúc, dữ liệu khái niệm(đưa vào csdl) và xử lý khái niệm(đưa vào nnlt) 
+- đầu ra thiết kế : 
+
+C12 : mô hinhf hóa là gì ? Vai trò của nó ?
+-slide
+C13 : phân tích 3 thành phần của pp mô hình hóa
+-slide
+C14 : hiểu biết về pp mô hình hóa hướng ct và hđt
+-slide

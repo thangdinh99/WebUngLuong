@@ -1,0 +1,14 @@
+Mở rộng -> kinh điển
+GD : (thực thể)
+hàng hóa,nhà cc,hóa đơn bán lẻ,sổ nhật ký,
+hợp đồng cc hàng,phiếu nhập kho
+Thuộc tính : 
++hóa đơn bán lẻ ,hợp đồng,phiếu nhập -> 
+tách ra thêm 3 dòng
+Giải thích : cái nào đa trị,xác định khóa ntn
+
+Kinh điển -> hạn chế
+
+Giải thích tách 1-1,n-n ntn,xác định khóa chính
+khóa ngoại,những kiểu thực thể nào,cái nào kết 
+xuất bỏ đi,.... theo đúng quy trình slide

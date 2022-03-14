@@ -1,21 +1,18 @@
 (function () {
   'use strict';
-
   angular
     .module('companies')
-    .factory('Companies', Coompanies);
-
-    Coompanies.$inject = ['$resource', '$log'];
-
-  function Coompanies($resource) {
-    var Coompanies = $resource('/companies/:companyId', {
+    .factory('Companies', Companies);
+  Companies.$inject = ['$resource'];
+  function Companies($resource) {
+    var Companies = $resource('/api/companies/:companyId', {
       companyId: '@_id'
     }, {
       update: {
         method: 'PUT'
       }
     });
-    return Coompanies;
+    return Companies;
 
   }
 }());

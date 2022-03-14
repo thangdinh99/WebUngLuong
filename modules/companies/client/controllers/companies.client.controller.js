@@ -5,24 +5,33 @@
     .module('companies')
     .controller('CompaniesController', CompaniesController);
 
-    CompaniesController.$inject = ['$scope', 'Authentication','Notification','Companies'];
+  CompaniesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'Companies','$http'];
 
-  function CompaniesController($scope, Authentication,Notification,Companies) {
-    console.log("xin chàoooooooooo");
-    const vm=this;
+  function CompaniesController($scope, $state, $location, Authentication, Notification, Companies,$http) {
+    const vm = this;
     vm.authentication = Authentication;
-    vm.init = ()=>{
-      const a = _.last([1,2,3])
-      console.log(a)
-      Notification.error({message: ' Successfully signed in!'});
+    vm.init = () =>{
+      $http.get('/api/companies').then(response => {
+        console.log('123');
+        vm.companies = response.data;
+      });
     }
-
-    vm.create = ()=>{
+    vm.create = () => {
       const companies = new Companies(vm.companies)
-      console.log(companies);
-
+      return companies
+        .$save()
+        .then(() => {
+          $location.path('/companies/create')
+          Notification.success(`Tạo công ty thành công`)
+          $state.reload()
+        })
+        .catch((err) => {
+          Notification.error(err)
+        })
+        .finally(() => {
+        })
     }
-    
+
 
   }
 }());

@@ -1,0 +1,48 @@
+
+-Kiểm tra chi tiết đơn hàng
++Kiểm tra chi tiết khách hàng
++Kiếm tra chi tiết mặt hàng 
+
+
+B1.xác định chức năng chi tiết
+-Tìm các động từ và bổ ngữ,xem có phải chức năng 
+có thể có không
+-Tìm và loại bỏ chức năng trùng lặp(giống tên 
+cùng công việc)
+-Gom nhóm,cái nào k có ý nghĩa => bỏ
+-Chỉnh sửa lại tên 
+B2.Gom nhóm
+
+Mức 0 : khung cảnh 
+mức 1 : đỉnh
+Mức 2 : dưới đỉnh
+
+BT3 : 
+A.Mức khung cảnh : QLBH gồm 3 kí hiệu
+
+-Tiến trình QLBH 
+-Luồng dữ liệu vào ra từ kh vào ht và ht -> kh,
+kệ luồng bên trong
+-đối tượng ngoài ht : khách hàng
++kh - > ht : đơn hàng
++ht->kh : yêu cầu trao đổi thông tin
++
+B.Mức đỉnh : 4 thành phần
+-Tiến trình QLBH 
+-Luồng dữ liệu vào ra từ kh vào ht và ht -> kh,
+luồng nội tại
+-đối tượng ngoài ht : khách hàng
+- có thêm kho dữ liệu : đơn hàng,khách hàng,
+hàng tồn kho,hóa đơn,phiếu yêu cầu
+
+- gồm 4 tiến trình : 
+
+BT4 : 
+-kho dữ liệu : khách hàng,đơn hàng,hàng tồn kho
+-tác nhân ngoài : khhasch hàng
+-các tiến trình liên quan :xử lý yêu cầu
+ qlkh là tác nhân trong,nằm ngoài hcn đứt nét
+=> bên ngoài đứt nét có cả tác nhân trong ngoài
+gồm: xlyc,qlkh,khaách hàng
+
+

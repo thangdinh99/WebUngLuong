@@ -1,0 +1,37 @@
+1.khởi  tạo
+-đầu vào  : yêu cầu ng dùng
+-đầu ra : 
+2.ptht : so khớp 2 tính năng
+-đầu vào : dự án khả thi,mô tả chi tiết về dự án đó.những bộ phận tham gia,quy trình,mẫu biểu,kế hoạch- chức năng cơ bản,nghiệp vụ yêu cầu 
+-đầu ra : mô hình dữ liệu(nghiệp vụ) ,mh chức năng : thể hiện chức năng từ cơ bản->chi tiết,đặc tả các chức năng
+
++ dữ liệu : chuẩn pcnf,đặc tả tất cả bản ghi dữ liệu
+
+3. thiết kế hệ thống
+-đầu ra : giao diện,kịch bản giao diện,kiến trúc hệ thống -> đưa vào NNLT
+ +  
+
+4.Mã hóa 
+-đầu ra : cài đặt,từ trên giấy thành chương trình cụ thể (vừa lập trình vừa kiểm thử ,đơn vị nào ra là làm đơn vị đó,sau đó kiểm thử tích hợp)
+-đầu ra : 1 khung chương trình đc kiểm thử
+
+5.kiểm thử(cho ng dùng,chủ đầu tư)
+-đầu ra : phần mềm hòan thiện
+6.vận hành,bảo trì
+-
+
+
+Câu 2 : PTTK hệ thống
+Câu 3 : hướng cấu trúc
+-mô hình bfd,dfd
+-mô hình thực thể liên kết er,mô hình quan hệ
+-hồ sơ thiết kế chương trình
+-hồ sơ thiết kế giao diện
+-
+
+câu 4 : sử dụng pp hướng cấu trúc
+-bp : bộ phận
+
+
+
+
