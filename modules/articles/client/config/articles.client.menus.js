@@ -9,7 +9,7 @@
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: 'Articles',
+      title: 'Thông báo',
       state: 'articles',
       type: 'dropdown',
       roles: ['*']
@@ -17,13 +17,13 @@
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'articles', {
-      title: 'List Articles',
+      title: 'Danh sách thông báo',
       state: 'articles.list',
       roles: ['*']
     });
 
     menuService.addSubMenuItem('topbar', 'articles', {
-      title: 'Manage Articles',
+      title: 'Quản lý thông báo',
       state: 'admin.articles.list'
     });
   }

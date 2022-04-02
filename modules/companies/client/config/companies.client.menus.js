@@ -9,20 +9,20 @@
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: 'Companies',
+      title: 'Công ty',
       state: 'companies',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['admin']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'companies', {
-      title: 'List Companies',
+      title: 'Danh sách công ty',
       state: 'listCompanies',
       roles: ['*']
     });
     menuService.addSubMenuItem('topbar', 'companies', {
-      title: 'Create Companies',
+      title: 'Thêm mới công ty',
       state: 'createCompanies',
       roles: ['*']
     });

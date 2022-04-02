@@ -10,11 +10,11 @@
   // Configuring the Users module
   function menuConfig(menuService) {
     menuService.addSubMenuItem('topbar', 'admin', {
-      title: 'List Users',
+      title: 'Danh sách người dùng',
       state: 'admin.users'
     });
     menuService.addSubMenuItem('topbar', 'admin', {
-      title: 'Create Users',
+      title: 'Thêm mới ngườii dùng',
       state: 'admin.user-create'
     });
   }
