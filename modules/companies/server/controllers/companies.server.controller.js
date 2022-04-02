@@ -76,7 +76,10 @@ exports.delete = function (req, res) {
  * List of Articles
  */
 exports.list = async (req, res) => {
-  const companies = await Company.find({ deleted: false }).sort('-created').populate('user', 'displayName').exec()
+  const companies = await Company.find({ deleted: false })
+    .sort('-created')
+    .populate('user', 'displayName')
+    .exec()
   res.json(companies)
 
 };
@@ -91,5 +94,5 @@ exports.companyById = function (req, res, next, id) {
     req.company = company;
     next();
   });
-  
+
 };

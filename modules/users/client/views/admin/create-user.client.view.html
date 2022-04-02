@@ -1,4 +1,4 @@
-<section  >
+<section ng-controller="UserCreateController as vm" ng-init="vm.init()" >
     <div class="page-header"><h1>Người dùng mới</h1></div>
     <div class="form-group row">
       <label for="" class="col-sm-2 col-form-label">Họ</label>
@@ -7,7 +7,7 @@
           type="text"
           class="form-control"
           id=""
-          placeholder="Tên công ty"
+          placeholder="Họ"
           ng-model="vm.companies.name"
         />
       </div>
@@ -19,7 +19,7 @@
           type="text"
           class="form-control"
           id=""
-          placeholder="Tên công ty"
+          placeholder="Tên và đệm"
           ng-model="vm.companies.name"
         />
       </div>

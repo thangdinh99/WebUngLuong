@@ -79,6 +79,11 @@ var UserSchema = new Schema({
     default: '',
     validate: [validateLocalStrategyEmail, 'Please fill a valid email address']
   },
+  address: {
+    type: String,
+    trim: true,
+    default: ''
+  },
   username: {
     type: String,
     unique: 'Username already exists',
@@ -126,6 +131,14 @@ var UserSchema = new Schema({
   active: {
     type: Boolean,
     default: true
+  },
+  company:{
+    type: Schema.Types.ObjectId,
+    ref: 'Company'
+  },
+  phone:{
+    type: Number,
+    default: 0
   },
   /* For reset password */
   resetPasswordToken: {
