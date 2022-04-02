@@ -11,7 +11,10 @@
     $stateProvider
       .state('createCompanies', {
         url: '/companies/create',
-        templateUrl: '/modules/companies/client/views/create-company.client.view.html'
+        templateUrl: '/modules/companies/client/views/create-company.client.view.html',
+        data: {
+          roles: ['admin']
+        },
       })
       .state('listCompanies', {
         url: '/companies/list',

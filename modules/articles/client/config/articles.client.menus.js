@@ -21,5 +21,10 @@
       state: 'articles.list',
       roles: ['*']
     });
+
+    menuService.addSubMenuItem('topbar', 'articles', {
+      title: 'Manage Articles',
+      state: 'admin.articles.list'
+    });
   }
 }());
