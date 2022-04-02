@@ -16,11 +16,7 @@
     vm.update = update;
     vm.isContextUserSelf = isContextUserSelf;
 
-    vm.init = () => {
-      console.log('123');
-      vm.companies = Companies.query();
-      console.log(vm.companies);
-    }
+   
 
     function remove(user) {
       if ($window.confirm('Are you sure you want to delete this user?')) {
