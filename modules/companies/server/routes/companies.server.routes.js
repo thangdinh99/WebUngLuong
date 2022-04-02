@@ -20,8 +20,11 @@ module.exports = function (app) {
         .get(companies.list)
         .post(companies.create);
     // Single article routes
-
+    app.route('/api/companies/:companyId')
+        .get(companies.read)
+        .put(companies.update)
+        .delete(companies.delete);
 
     // Finish by binding the article middleware
-    // app.param('companyId', companies.companyById);
+    app.param('companyId', companies.companyById);
 };

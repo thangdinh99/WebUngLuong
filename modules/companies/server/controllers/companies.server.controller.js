@@ -3,16 +3,16 @@
 /**
  * Module dependencies
  */
-var path = require('path'),
-  mongoose = require('mongoose'),
-  Company = mongoose.model('Company'),
-  errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
+var path = require('path')
+const mongoose = require('mongoose')
+const Company = mongoose.model('Company')
+const errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'))
 
 /**
  * Create an article
  */
 exports.create = function (req, res) {
-  var company = new Company(req.body);
+  const company = new Company(req.body);
   company.user = req.user;
 
   company.save(function (err) {
@@ -30,88 +30,66 @@ exports.create = function (req, res) {
  * Show the current article
  */
 exports.read = function (req, res) {
-//   // convert mongoose document to JSON
-//   var article = req.article ? req.article.toJSON() : {};
-
-//   // Add a custom field to the Article, for determining if the current User is the "owner".
-//   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
-//   article.isCurrentUserOwner = !!(req.user && article.user && article.user._id.toString() === req.user._id.toString());
-
-//   res.json(article);
+  res.json(req.company);
 };
 
 /**
  * Update an article
  */
 exports.update = function (req, res) {
-//   var article = req.article;
+  const company = req.company;
+  company.name = req.body.name;
+  company.code = req.body.code;
+  company.address = req.body.address;
+  company.phone = req.body.phone;
+  company.active = req.body.active;
 
-//   article.title = req.body.title;
-//   article.content = req.body.content;
-
-//   article.save(function (err) {
-//     if (err) {
-//       return res.status(422).send({
-//         message: errorHandler.getErrorMessage(err)
-//       });
-//     } else {
-//       res.json(article);
-//     }
-//   });
+  company.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(company);
+    }
+  });
 };
 
 /**
  * Delete an article
  */
 exports.delete = function (req, res) {
-//   var article = req.article;
-
-//   article.remove(function (err) {
-//     if (err) {
-//       return res.status(422).send({
-//         message: errorHandler.getErrorMessage(err)
-//       });
-//     } else {
-//       res.json(article);
-//     }
-//   });
+  const company = req.company;
+  company.deleted = true;
+  company.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(company);
+    }
+  });
 };
 
 /**
  * List of Articles
  */
-exports.list = function (req, res) {
-//   Article.find().sort('-created').populate('user', 'displayName').exec(function (err, articles) {
-//     if (err) {
-//       return res.status(422).send({
-//         message: errorHandler.getErrorMessage(err)
-//       });
-//     } else {
-//       res.json(articles);
-//     }
-//   });
+exports.list = async (req, res) => {
+  const companies = await Company.find({ deleted: false }).sort('-created').populate('user', 'displayName').exec()
+  res.json(companies)
+
 };
 
 /**
  * Article middleware
  */
-exports.articleById = function (req, res, next, id) {
-
-//   if (!mongoose.Types.ObjectId.isValid(id)) {
-//     return res.status(400).send({
-//       message: 'Article is invalid'
-//     });
-//   }
-
-//   Article.findById(id).populate('user', 'displayName').exec(function (err, article) {
-//     if (err) {
-//       return next(err);
-//     } else if (!article) {
-//       return res.status(404).send({
-//         message: 'No article with that identifier has been found'
-//       });
-//     }
-//     req.article = article;
-//     next();
-//   });
+exports.companyById = function (req, res, next, id) {
+  Company.findById(id).populate('user', 'displayName').exec(function (err, company) {
+    if (err) return next(err);
+    if (!company) return next(new Error('Failed to load article ' + id));
+    req.company = company;
+    next();
+  });
+  
 };

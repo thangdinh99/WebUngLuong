@@ -34,13 +34,17 @@ var CompanySchema = new Schema({
         default: ''
     },
     phone: {
-        type: String,
+        type: Number,
         required: 'Chưa điền mã công ty',
-        default: ''
+        default: '',
     },
     active: {
         type: Boolean,
         default: true
+    },
+    user : {
+        type: Schema.ObjectId,
+        ref: 'User'
     },
     deleted: {
         type: Boolean,

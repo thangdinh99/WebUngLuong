@@ -18,11 +18,17 @@
       })
       .state('listCompanies', {
         url: '/companies/list',
-        templateUrl: '/modules/companies/client/views/list-companies.client.view.html'
+        templateUrl: '/modules/companies/client/views/list-companies.client.view.html',
+        data: {
+          roles: ['admin']
+        },
       })
       .state('editCompanies', {
         url: '/companies/:companyId',
-        templateUrl: '/modules/companies/client/views/edit-company.client.view.html'
+        templateUrl: '/modules/companies/client/views/edit-company.client.view.html',
+        data: {
+          roles: ['admin']
+        },
       });
   }
 
