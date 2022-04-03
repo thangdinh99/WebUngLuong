@@ -38,6 +38,30 @@ exports.update = function (req, res) {
   });
 };
 
+exports.create = function (req, res) {
+  
+  // Init user and add missing fields
+  var user = new User(req.body);
+  user.provider = 'local';
+  user.displayName = user.firstName + ' ' + user.lastName;
+  user.roles = req.body.roles;
+
+  // Then save the user
+  user.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      // Remove sensitive data before login
+      return res.status(200).send({
+        message: 'User created successfully',
+        user: user
+      })
+    }
+  });
+};
+
 /**
  * Delete a user
  */

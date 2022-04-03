@@ -43,7 +43,9 @@
       .state('admin.user-create', {
         url: '/createUser',
         templateUrl: '/modules/users/client/views/admin/create-user.client.view.html',
-        
+        data: {
+          roles: ['admin','manager']
+        }
       });
       
 
