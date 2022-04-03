@@ -1,0 +1,98 @@
+'use strict';
+
+/**
+ * Module dependencies
+ */
+var path = require('path')
+const mongoose = require('mongoose')
+const Salary = mongoose.model('Salary')
+const errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'))
+
+/**
+ * Create an article
+ */
+exports.create = function (req, res) {
+  const salary = new Salary(req.body);
+  salary.user = req.user;
+
+  salary.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(salary);
+    }
+  });
+};
+
+/**
+ * Show the current article
+ */
+exports.read = function (req, res) {
+  res.json(req.salary);
+};
+
+/**
+ * Update an article
+ */
+exports.update = function (req, res) {
+  const salary = req.salary;
+  salary.name = req.body.name;
+  salary.code = req.body.code;
+  salary.address = req.body.address;
+  salary.phone = req.body.phone;
+  salary.active = req.body.active;
+
+  salary.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(salary);
+    }
+  });
+};
+
+/**
+ * Delete an article
+ */
+exports.delete = function (req, res) {
+  const salary = req.salary;
+  salary.deleted = true;
+  salary.save(function (err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(salary);
+    }
+  });
+};
+
+/**
+ * List of Articles
+ */
+exports.list = async (req, res) => {
+  const salaries = await Salary.find({ deleted: false })
+    .sort('-created')
+    .populate('user', 'displayName')
+    .exec()
+  res.json(salaries)
+
+};
+
+/**
+ * Article middleware
+ */
+exports.salaryById = function (req, res, next, id) {
+  Salary.findById(id).populate('user', 'displayName').exec(function (err, salary) {
+    if (err) return next(err);
+    if (!salary) return next(new Error('Failed to load article ' + id));
+    req.salary = salary;
+    next();
+  });
+
+};

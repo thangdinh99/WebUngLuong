@@ -39,7 +39,7 @@ exports.update = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  
+
   // Init user and add missing fields
   var user = new User(req.body);
   user.provider = 'local';
@@ -83,7 +83,11 @@ exports.delete = function (req, res) {
  * List of Users
  */
 exports.list = function (req, res) {
-  User.find({}, '-salt -password -providerData').sort('-created').populate('user', 'displayName').exec(function (err, users) {
+  User.find({}, '-salt -password -providerData')
+  .sort('-created')
+  .populate('user', 'displayName')
+  .populate('company', 'name')
+  .exec(function (err, users) {
     if (err) {
       return res.status(422).send({
         message: errorHandler.getErrorMessage(err)

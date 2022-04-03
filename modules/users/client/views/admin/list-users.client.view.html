@@ -9,8 +9,10 @@
       ng-table="vm.userTable"
     >
       <colgroup>
-        <col width="45%" />
-        <col width="45%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="25%" />
+        <col width="25%" />
         <col width="10%" />
       </colgroup>
       <tr ng-repeat="user in $data">
@@ -20,6 +22,20 @@
           sortable="'displayName'"
         >
           {{user.displayName}}
+        </td>
+        <td
+          data-title="'Công ty'"
+          data-filter="{'company.name': 'text'}"
+          sortable="'company.name'"
+        >
+          {{user.company.name}}
+        </td>
+        <td
+          data-title="'Email'"
+          data-filter="{'email': 'text'}"
+          sortable="'email'"
+        >
+          {{user.email}}
         </td>
         <td
           data-title="'Email'"

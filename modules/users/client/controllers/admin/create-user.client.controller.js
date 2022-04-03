@@ -43,7 +43,6 @@
       if(!vm.user.company){
         return Notification.error({ message: 'Bạn chưa chọn công ty', title: '<i class="glyphicon glyphicon-remove"></i> Có lỗi xảy ra!' });
       }
-      
 
       console.log(vm.user);
       const user = new AdminService(vm.user);
