@@ -17,34 +17,16 @@ var SalarySchema = new Schema({
         type: Date,
         default: Date.now
     },
-    name: {
+    title: {
         type: String,
         default: '',
         trim: true,
-        required: 'Chưa điền tên công ty'
+        required: 'Chưa điền tiêu đề'
     },
-    code: {
-        type: String,
-        required: 'Chưa điền mã công ty',
-        default: '',
-        unique: true
-    },
-    address: {
-        type: String,
-        default: ''
-    },
-    phone: {
+    salary: {
         type: Number,
-        required: 'Chưa điền mã công ty',
-        default: '',
-    },
-    active: {
-        type: Boolean,
-        default: true
-    },
-    user : {
-        type: Schema.ObjectId,
-        ref: 'User'
+        required: 'Chưa điền số tiền lương',
+        default: 0,
     },
     deleted: {
         type: Boolean,

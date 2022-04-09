@@ -7,6 +7,7 @@ var path = require('path')
 const mongoose = require('mongoose')
 const Salary = mongoose.model('Salary')
 const errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'))
+const _ = require('lodash')
 
 /**
  * Create an article
@@ -37,13 +38,8 @@ exports.read = function (req, res) {
  * Update an article
  */
 exports.update = function (req, res) {
-  const salary = req.salary;
-  salary.name = req.body.name;
-  salary.code = req.body.code;
-  salary.address = req.body.address;
-  salary.phone = req.body.phone;
-  salary.active = req.body.active;
-
+  let salary = req.salary;
+  salary = _.assignIn(salary, req.body);
   salary.save(function (err) {
     if (err) {
       return res.status(422).send({
@@ -75,7 +71,7 @@ exports.delete = function (req, res) {
 /**
  * List of Articles
  */
-exports.list = async (req, res) => {
+exports.list = async function (req, res)   {
   const salaries = await Salary.find({ deleted: false })
     .sort('-created')
     .populate('user', 'displayName')

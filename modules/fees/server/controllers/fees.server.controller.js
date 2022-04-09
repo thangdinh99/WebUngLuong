@@ -5,23 +5,24 @@
  */
 var path = require('path')
 const mongoose = require('mongoose')
-const Company = mongoose.model('Company')
+const Fee = mongoose.model('Fee')
 const errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'))
+const _ = require('lodash')
 
 /**
  * Create an article
  */
 exports.create = function (req, res) {
-  const company = new Company(req.body);
-  company.user = req.user;
+  const fee = new Fee(req.body);
+  fee.user = req.user;
 
-  company.save(function (err) {
+  fee.save(function (err) {
     if (err) {
       return res.status(422).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(company);
+      res.json(fee);
     }
   });
 };
@@ -30,27 +31,22 @@ exports.create = function (req, res) {
  * Show the current article
  */
 exports.read = function (req, res) {
-  res.json(req.company);
+  res.json(req.fee);
 };
 
 /**
  * Update an article
  */
 exports.update = function (req, res) {
-  const company = req.company;
-  company.name = req.body.name;
-  company.code = req.body.code;
-  company.address = req.body.address;
-  company.phone = req.body.phone;
-  company.active = req.body.active;
-
-  company.save(function (err) {
+  let fee = req.fee;
+  fee = _.assignIn(fee, req.body);
+  fee.save(function (err) {
     if (err) {
       return res.status(422).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(company);
+      res.json(fee);
     }
   });
 };
@@ -59,15 +55,15 @@ exports.update = function (req, res) {
  * Delete an article
  */
 exports.delete = function (req, res) {
-  const company = req.company;
-  company.deleted = true;
-  company.save(function (err) {
+  const fee = req.fee;
+  fee.deleted = true;
+  fee.save(function (err) {
     if (err) {
       return res.status(422).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(company);
+      res.json(fee);
     }
   });
 };
@@ -76,21 +72,22 @@ exports.delete = function (req, res) {
  * List of Articles
  */
 exports.list = async function (req, res) {
-  const companies = await Company.find({ deleted: false })
+  const fees = await Fee.find({ deleted: false })
     .sort('-created')
     .populate('user', 'displayName')
     .exec()
-  res.json(companies)
+  res.json(fees)
+
 };
 
 /**
  * Article middleware
  */
-exports.companyById = function (req, res, next, id) {
-  Company.findById(id).populate('user', 'displayName').exec(function (err, company) {
+exports.feeById = function (req, res, next, id) {
+  Fee.findById(id).populate('user', 'displayName').exec(function (err, fee) {
     if (err) return next(err);
-    if (!company) return next(new Error('Failed to load article ' + id));
-    req.company = company;
+    if (!fee) return next(new Error('Failed to load article ' + id));
+    req.fee = fee;
     next();
   });
 

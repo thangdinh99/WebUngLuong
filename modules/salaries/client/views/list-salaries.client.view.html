@@ -1,61 +1,47 @@
-<section ng-controller="CompaniesController as vm" ng-init="vm.init()">
+<section ng-controller="SalariesController as vm" ng-init="vm.init()">
     <div class="page-header">
-      <h1>Danh sách công ty</h1>
+      <h1>Danh sách bậc lương</h1>
     </div>
     <div class="panel panel-default">
       <div class="panel-body"></div>
       <table
         class="table table-condensed table-bordered table-hover"
-        ng-table="vm.companyTable"
+        ng-table="vm.salaryTable"
       >
         <colgroup>
-          <col width="20%" />
-          <col width="20%" />
-          <col width="25%" />
-          <col width="25%" />
+          <col width="45%" />
+          <col width="45%" />
           <col width="10%" />
         </colgroup>
-        <tr ng-repeat="company in $data">
+        <tr ng-repeat="salary in $data">
           <td
-            data-title="'Mã công ty'"
-            data-filter="{code: 'text'}"
-            sortable="'code'"
+            class="text-center"
+            data-title="'Tiêu đề bậc lương'"
+            data-filter="{title: 'text'}"
+            sortable="'title'"
           >
-            {{company.code}}
+            {{salary.title}}
           </td>
           <td
-            data-title="'Tên công ty'"
-            data-filter="{name: 'text'}"
-            sortable="'name'"
-          >
-            {{company.name}}
-          </td>
-          <td
-            data-title="'Địa chỉ'"
-            data-filter="{address: 'text'}"
-            sortable="'address'"
-          >
-            {{company.address}}
-          </td>
-          <td
+           class="text-center"
             data-title="'Số điện thoại'"
-            data-filter="{'phone': 'number'}"
-            sortable="'phone'"
+            data-filter="{'salary': 'number'}"
+            sortable="'salary'"
           >
-            {{company.phone}}
+            {{salary.salary | number}}
           </td>
-          <td data-title="'Tác vụ'">
+          <td class="text-center" data-title="'Tác vụ'">
             <button
               type="button"
               class="btn btn-primary btn-xs"
-              ui-sref="editCompanies({companyId: company._id})"
+              ui-sref="editSalaries({salaryId: salary._id})"
             >
               <i class="fa fa-pencil">Sửa</i>
             </button>
             <button
               type="button"
               class="btn btn-danger btn-xs"
-              ng-click="vm.remove($index, company)"
+              ng-click="vm.remove($index, salary)"
             >
               <i class="fa fa-trash">Xóa</i>
             </button>
@@ -68,9 +54,9 @@
       <button
         type="button"
         class="btn btn-primary"
-        ui-sref="createCompanies"
+        ui-sref="createSalaries"
       >
-        Tạo công ty mới
+        Tạo mới bậc lương
       </button>
     </div>
   </section>

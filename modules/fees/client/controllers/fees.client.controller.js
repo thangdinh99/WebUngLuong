@@ -2,51 +2,56 @@
   'use strict';
 
   angular
-    .module('salaries')
-    .controller('SalariesController', SalariesController);
+    .module('fees')
+    .controller('FeeController', FeesController);
 
-  SalariesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'Salaries', '$http', 'NgTableParams', "$filter", 'ConfirmModal'];
+  FeesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'Fees', '$http', 'NgTableParams', "$filter", 'ConfirmModal'];
 
-  function SalariesController($scope, $state, $location, Authentication, Notification, Salaries, $http, NgTableParams, $filter, ConfirmModal) {
+  function FeesController($scope, $state, $location, Authentication, Notification, Fees, $http, NgTableParams, $filter, ConfirmModal) {
     const vm = this;
     vm.authentication = Authentication;
 
     vm.init = () => {
-      Salaries.query((data) => {
-        vm.salaries = data
-        vm.salaryTable = new NgTableParams({}, { dataset: vm.salaries })
+      Fees.query((data) => {
+        console.log(data);
+        vm.fees = data
+        vm.feeTable = new NgTableParams({}, { dataset: vm.fees })
       });
     }
 
     vm.create = () => {
-      const salaries = new Salaries(vm.salaries)
-      return salaries
+      const fees = new Fees(vm.fees)
+      return fees
         .$save()
         .then(() => {
-          $location.path('/salaries/create')
-          Notification.success(`Tạo bậc lương thành công`)
+          $location.path('/fees/create')
+          Notification.success(`Tạo công ty thành công`)
           $state.reload()
         })
         .catch((err) => {
           Notification.error({ message: err.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Có lỗi xảy ra!' });
         })
+        .finally(() => {
+
+        })
     }
 
     vm.findOne = () => {
-      console.log($state.params.salaryId);
-      Salaries.get({
-        salaryId: $state.params.salaryId
+      console.log($state.params.feeId);
+      Fees.get({
+        feeId: $state.params.feeId
       }, (data) => {
-        vm.salaries = data
+        vm.fees = data
       })
     }
 
     vm.update = () => {
-      vm.salaries
+      console.log('123');
+      vm.fees
         .$update()
         .then(() => {
-          Notification.success(`Cập nhật bậc lương thành công`)
-          $state.go('listSalaries')
+          Notification.success(`Cập nhật công ty thành công`)
+          $state.go('listFees')
         })
         .catch(
           (err) => {
@@ -55,14 +60,14 @@
         )
     }
 
-    vm.remove = (index,salary) => {
+    vm.remove = (index,fee) => {
       
       ConfirmModal.show(
       ).then(() => {
-        salary
+        fee
           .$remove()
           .then(() => {
-            Notification.success(`Xóa bậc lương thành công`)
+            Notification.success(`Xóa công ty thành công`)
             $state.reload()
           })
           .catch(
