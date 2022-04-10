@@ -124,7 +124,7 @@ var UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  deleted:{
+  deleted: {
     type: Boolean,
     default: false
   },
@@ -132,11 +132,15 @@ var UserSchema = new Schema({
     type: Boolean,
     default: true
   },
-  company:{
+  company: {
     type: Schema.Types.ObjectId,
     ref: 'Company'
   },
-  phone:{
+  salary: {
+    type: Schema.Types.ObjectId,
+    ref: 'Salary'
+  },
+  phone: {
     type: Number,
     default: 0
   },

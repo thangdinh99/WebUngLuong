@@ -5,9 +5,9 @@
     .module('users.admin')
     .controller('UserController', UserController);
 
-  UserController.$inject = ['$scope', '$state', '$window', 'Authentication', 'userResolve', 'Notification', 'Companies'];
+  UserController.$inject = ['$scope','$location', '$state', '$window', 'Authentication', 'userResolve', 'Notification', 'Companies','Salaries'];
 
-  function UserController($scope, $state, $window, Authentication, user, Notification, Companies) {
+  function UserController($scope,$location, $state, $window, Authentication, user, Notification, Companies,Salaries) {
     const vm = this;
 
     vm.authentication = Authentication;
@@ -16,7 +16,15 @@
     vm.update = update;
     vm.isContextUserSelf = isContextUserSelf;
 
-   
+    vm.init = () => {
+      Salaries.query().$promise.then(function (data) {
+        vm.salaries = data;
+        console.log(vm.salaries);
+      });
+      Companies.query().$promise.then(function (data) {
+        vm.companies = data;
+      });
+    }
 
     function remove(user) {
       if ($window.confirm('Are you sure you want to delete this user?')) {
@@ -44,9 +52,7 @@
       var user = vm.user;
 
       user.$update(function () {
-        $state.go('admin.user', {
-          userId: user._id
-        });
+        $location.path('/admin/users');
         Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> User saved successfully!' });
       }, function (errorResponse) {
         Notification.error({ message: errorResponse.data.message, title: '<i class="glyphicon glyphicon-remove"></i> User update error!' });

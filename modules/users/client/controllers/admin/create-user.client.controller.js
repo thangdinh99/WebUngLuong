@@ -5,13 +5,17 @@
     .module('users.admin')
     .controller('UserCreateController', UserCreateController);
 
-  UserCreateController.$inject = ['$scope', '$state', '$window', 'Authentication', 'Notification', 'Companies', 'AdminService'];
+  UserCreateController.$inject = ['$scope', '$state', '$window', 'Authentication', 'Notification', 'Companies','Salaries', 'AdminService'];
 
-  function UserCreateController($scope, $state, $window, Authentication, Notification, Companies, AdminService) {
+  function UserCreateController($scope, $state, $window, Authentication, Notification, Companies,Salaries, AdminService) {
     const vm = this;
     vm.authentication = Authentication;
     vm.user = {};
     vm.init = () => {
+      Salaries.query().$promise.then(function (data) {
+        vm.salaries = data;
+        console.log(vm.salaries);
+      });
       Companies.query().$promise.then(function (data) {
         vm.companies = data;
         console.log(vm.companies);
