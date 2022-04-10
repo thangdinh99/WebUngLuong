@@ -10,7 +10,6 @@
   function SalariesController($scope, $state, $location, Authentication, Notification, Salaries, $http, NgTableParams, $filter, ConfirmModal) {
     const vm = this;
     vm.authentication = Authentication;
-
     vm.init = () => {
       Salaries.query((data) => {
         vm.salaries = data
@@ -55,8 +54,8 @@
         )
     }
 
-    vm.remove = (index,salary) => {
-      
+    vm.remove = (index, salary) => {
+
       ConfirmModal.show(
       ).then(() => {
         salary

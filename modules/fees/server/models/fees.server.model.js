@@ -19,18 +19,18 @@ var FeeSchema = new Schema({
     },
     startMoney: {
         type: Number,
-        required: 'Chưa điền mốc tính phí dưới',
-        default: '0',
+        required: 'Chưa điền hạn mốc bắt đầu phí ứng',
+        
     },
     endMoney: {
         type: Number,
-        required: 'Chưa điền mốc tính phí trên',
-        default: '0',
+        required: 'Chưa điền hạn mốc kết thúc phí ứng',
+        
     },
     feeMoney: {
         type: Number,
         required: 'Chưa điền số tiền phí',
-        default: '0',
+        
     },
     user: {
         type: Schema.ObjectId,

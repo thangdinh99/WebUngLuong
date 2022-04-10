@@ -3,19 +3,16 @@
 /**
  * Module dependencies
  */
+// const _ = require('lodash')
 var path = require('path')
 const mongoose = require('mongoose')
 const Salary = mongoose.model('Salary')
 const errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'))
-const _ = require('lodash')
 
-/**
- * Create an article
- */
 exports.create = function (req, res) {
-  const salary = new Salary(req.body);
+  var salary = new Salary(req.body);
   salary.user = req.user;
-
+  console.log(salary);
   salary.save(function (err) {
     if (err) {
       return res.status(422).send({
@@ -27,9 +24,21 @@ exports.create = function (req, res) {
   });
 };
 
-/**
- * Show the current article
- */
+exports.add = function (req, res) {
+  var salary = new Salary(req.body);
+  salary.user = req.user;
+  console.log(salary);
+  salary.save().then(function (salary) {
+    res.json(salary);
+  }).catch(function (err) {
+    res.status(422).send({
+      message: errorHandler.getErrorMessage(err)
+    });
+  });
+};
+
+
+
 exports.read = function (req, res) {
   res.json(req.salary);
 };
@@ -39,7 +48,9 @@ exports.read = function (req, res) {
  */
 exports.update = function (req, res) {
   let salary = req.salary;
-  salary = _.assignIn(salary, req.body);
+  salary.title = req.body.title;
+  salary.salary = req.body.salary;
+  // salary = _.assignIn(salary, req.body);
   salary.save(function (err) {
     if (err) {
       return res.status(422).send({

@@ -7,14 +7,14 @@ var path = require('path')
 const mongoose = require('mongoose')
 const Company = mongoose.model('Company')
 const errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'))
+var _ = require('lodash')
 
-/**
- * Create an article
- */
+
+
 exports.create = function (req, res) {
   const company = new Company(req.body);
   company.user = req.user;
-
+  console.log(company);
   company.save(function (err) {
     if (err) {
       return res.status(422).send({
@@ -37,12 +37,14 @@ exports.read = function (req, res) {
  * Update an article
  */
 exports.update = function (req, res) {
-  const company = req.company;
-  company.name = req.body.name;
-  company.code = req.body.code;
-  company.address = req.body.address;
-  company.phone = req.body.phone;
-  company.active = req.body.active;
+  let company = req.company;
+  // company.name = req.body.name;
+  // company.code = req.body.code;
+  // company.address = req.body.address;
+  // company.phone = req.body.phone;
+  // company.active = req.body.active;
+
+  company = _.assignIn(company, req.body);
 
   company.save(function (err) {
     if (err) {

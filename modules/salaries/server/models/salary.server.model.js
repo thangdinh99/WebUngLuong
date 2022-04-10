@@ -9,31 +9,30 @@ var mongoose = require('mongoose'),
     config = require(path.resolve('./config/config')),
     chalk = require('chalk');
 
-/**
- * Article Schema
- */
 var SalarySchema = new Schema({
-    created: {
-        type: Date,
-        default: Date.now
-    },
     title: {
         type: String,
         default: '',
         trim: true,
-        required: 'Chưa điền tiêu đề'
+        required: 'Chưa điền tên bậc lương'
     },
     salary: {
         type: Number,
-        required: 'Chưa điền số tiền lương',
         default: 0,
+        trim: true,
+        requied: 'Chưa điền số tiền lương'
     },
     deleted: {
         type: Boolean,
         default: false
+    },
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User'
     }
-
-}, { timestamp: true });
+});
 
 
 mongoose.model('Salary', SalarySchema);
+
+

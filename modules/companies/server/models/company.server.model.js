@@ -9,9 +9,7 @@ var mongoose = require('mongoose'),
     config = require(path.resolve('./config/config')),
     chalk = require('chalk');
 
-/**
- * Article Schema
- */
+
 var CompanySchema = new Schema({
     created: {
         type: Date,

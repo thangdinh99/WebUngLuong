@@ -6,60 +6,51 @@
     <div class="panel-body"></div>
     <table
       class="table table-condensed table-bordered table-hover"
-      ng-table="vm.companyTable"
+      ng-table="vm.feeTable"
     >
       <colgroup>
-        <col width="20%" />
-        <col width="20%" />
-        <col width="25%" />
-        <col width="25%" />
+        <col width="30%" />
+        <col width="30%" />
+        <col width="30%" />
         <col width="10%" />
       </colgroup>
-      <tr ng-repeat="company in $data">
+      <tr ng-repeat="fee in $data">
         <td
           class="text-center"
-          data-title="'Mã công ty'"
-          data-filter="{code: 'text'}"
-          sortable="'code'"
+          data-title="'Hạn mức bắt đầu phí ứng'"
+          data-filter="{'startMoney': 'number'}"
+          sortable="'startMoney'"
         >
-          {{company.code}}
+          {{fee.startMoney | number  }}
         </td>
         <td
           class="text-center"
-          data-title="'Tên công ty'"
-          data-filter="{name: 'text'}"
-          sortable="'name'"
+          data-title="'Hạn mức kết thúc phí ứng'"
+          data-filter="{'endMoney': 'number'}"
+          sortable="'endMoney'"
         >
-          {{company.name}}
+          {{fee.endMoney | number }}
         </td>
         <td
           class="text-center"
-          data-title="'Địa chỉ'"
-          data-filter="{address: 'text'}"
-          sortable="'address'"
+          data-title="'Số tiền phí'"
+          data-filter="{'feeMoney': 'number'}"
+          sortable="'feeMoney'"
         >
-          {{company.address}}
-        </td>
-        <td
-          class="text-center"
-          data-title="'Số điện thoại'"
-          data-filter="{'phone': 'number'}"
-          sortable="'phone'"
-        >
-          {{company.phone}}
+          {{fee.feeMoney | number}}
         </td>
         <td class="text-center" data-title="'Tác vụ'">
           <button
             type="button"
             class="btn btn-primary btn-xs"
-            ui-sref="editCompanies({companyId: company._id})"
+            ui-sref="editFees({feeId: fee._id})"
           >
             <i class="fa fa-pencil">Sửa</i>
           </button>
           <button
             type="button"
             class="btn btn-danger btn-xs"
-            ng-click="vm.remove($index, company)"
+            ng-click="vm.remove($index, fee)"
           >
             <i class="fa fa-trash">Xóa</i>
           </button>
@@ -69,8 +60,8 @@
   </div>
 
   <div class="form-group text-center">
-    <button type="button" class="btn btn-primary" ui-sref="createCompanies">
-      Tạo công ty mới
+    <button type="button" class="btn btn-primary" ui-sref="createFees">
+      Tạo phí ứng lương mới
     </button>
   </div>
 </section>
