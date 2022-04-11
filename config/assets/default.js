@@ -27,6 +27,8 @@ module.exports = {
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
         'public/lib/lodash/lodash.js',
         'public/lib/ng-table/dist/ng-table.min.js',
+        'public/lib/moment/moment.js',
+        'public/lib/moment/locale/vi.js',
         // endbower
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']

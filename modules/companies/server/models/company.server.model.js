@@ -36,6 +36,11 @@ var CompanySchema = new Schema({
         required: 'Chưa điền mã công ty',
         default: '',
     },
+    retireHour: {
+        type: Number,
+        required: 'Chưa điền giờ nghỉ ngơi công ty',
+        default: 0,
+    },
     active: {
         type: Boolean,
         default: true
