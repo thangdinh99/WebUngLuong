@@ -15,14 +15,14 @@ const moment = require('moment')
  * Create an article
  */
 exports.create = function (req, res) {
-  // const shift = new Shift(req.body);
-  // const start = moment(shift.startDate)
-  // const end = moment(shift.endDate)
-  // const duration = moment.duration(end.diff(start))
-  // const hours = duration.asHours()
-  // const workingHour = hours - 1.5
-  // console.log(hours);
-  // console.log(_.round(workingHour, 2));
+
+  const shift = new Shift(req.body);
+  const start = moment(shift.startDate)
+  const end = moment(shift.endDate)
+  const duration = moment.duration(end.diff(start))
+  const hours = duration.asHours()
+  const workingHour = hours - 1.5
+  shift.workingHour = workingHour
   shift.save(function (err) {
     if (err) {
       return res.status(422).send({
@@ -81,7 +81,14 @@ exports.delete = function (req, res) {
 exports.list = async function (req, res) {
   const shifts = await Shift.find({ deleted: false })
     .sort('-created')
-    .populate('user', 'displayName')
+    .populate({
+      path: 'user',
+      select: 'displayName company',
+      populate: {
+        path: 'company',
+        select: 'name'
+      }
+    })
     .exec()
   res.json(shifts)
 

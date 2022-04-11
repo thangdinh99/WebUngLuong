@@ -13,9 +13,9 @@
     vm.shifts = {};
 
     vm.getAllUser = () => {
-      console.log(moment().format('YYYY-MM-DD'));
       AdminService.query(function (data) {
         vm.users = data;
+        console.log(vm.users);
       });
     }
     vm.init = () => {
@@ -53,7 +53,11 @@
       Shifts.get({
         shiftId: $state.params.shiftId
       }, (data) => {
+        console.log(data);
         vm.shifts = data
+        vm.shifts.startDate =new Date(data.startDate)
+        vm.shifts.endDate = new Date(data.endDate)
+        vm.shifts.user = data.user._id
       })
     }
 
