@@ -9,7 +9,7 @@ module.exports = function (app) {
     
     app.route('/api/salaries')
         .get(salaries.list)
-        .post(salaries.add);
+        .post(salaries.create);
     
     app.route('/api/salaries/:salaryId')
         .get(salaries.read)

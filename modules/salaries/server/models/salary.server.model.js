@@ -10,6 +10,10 @@ var mongoose = require('mongoose'),
     chalk = require('chalk');
 
 var SalarySchema = new Schema({
+    created: {
+        type: Date,
+        default: Date.now
+    },
     title: {
         type: String,
         default: '',
@@ -30,6 +34,8 @@ var SalarySchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User'
     }
+}, {
+    timestamps: true
 });
 
 

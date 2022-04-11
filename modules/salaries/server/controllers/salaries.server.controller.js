@@ -24,18 +24,7 @@ exports.create = function (req, res) {
   });
 };
 
-exports.add = function (req, res) {
-  var salary = new Salary(req.body);
-  salary.user = req.user;
-  console.log(salary);
-  salary.save().then(function (salary) {
-    res.json(salary);
-  }).catch(function (err) {
-    res.status(422).send({
-      message: errorHandler.getErrorMessage(err)
-    });
-  });
-};
+
 
 
 

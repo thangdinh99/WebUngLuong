@@ -17,6 +17,7 @@
       </colgroup>
       <tr ng-repeat="user in $data">
         <td
+          class="text-center"
           data-title="'Tên'"
           data-filter="{displayName: 'text'}"
           sortable="'displayName'"
@@ -24,6 +25,7 @@
           {{user.displayName}}
         </td>
         <td
+          class="text-center"
           data-title="'Công ty'"
           data-filter="{'company.name': 'text'}"
           sortable="'company.name'"
@@ -31,6 +33,7 @@
           {{user.company.name}}
         </td>
         <td
+          class="text-center"
           data-title="'Email'"
           data-filter="{'email': 'text'}"
           sortable="'email'"
@@ -38,13 +41,14 @@
           {{user.email}}
         </td>
         <td
+          class="text-center"
           data-title="'Email'"
           data-filter="{'email': 'text'}"
           sortable="'email'"
         >
           {{user.email}}
         </td>
-        <td data-title="'Tác vụ'">
+        <td data-title="'Tác vụ'" class="text-center">
           <button
             type="button"
             class="btn btn-primary btn-xs"
@@ -65,11 +69,7 @@
   </div>
 
   <div class="form-group text-center">
-    <button
-      type="button"
-      class="btn btn-primary"
-      ui-sref="admin.user-create"
-    >
+    <button type="button" class="btn btn-primary" ui-sref="admin.user-create">
       Tạo User mới
     </button>
   </div>
