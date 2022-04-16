@@ -2,7 +2,7 @@
 
 // const { Router } = require('express')
 // const router = Router()
-const salaryAdvances = require('../controllers/salaryadvances.server.controller');
+const salaryAdvances = require('../controllers/salary-advances.server.controller');
 
 module.exports = function (app) {
    
