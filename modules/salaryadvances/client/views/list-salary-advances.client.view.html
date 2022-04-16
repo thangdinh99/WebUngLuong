@@ -1,0 +1,85 @@
+<section ng-controller="SalaryAdvancesController as vm" ng-init="vm.init()">
+  <div class="page-header">
+    <h1>Danh sách chấm công</h1>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body"></div>
+    <table
+      class="table table-condensed table-bordered table-hover"
+      ng-table="vm.salaryAdvanceTable"
+    >
+      <colgroup>
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="10%" />
+        <col width="10%" />
+      </colgroup>
+      <tr ng-repeat="salaryAdvance in $data">
+        <td
+          class="text-center"
+          data-title="'Tên'"
+          data-filter="{'user.displayName': 'text'}"
+          sortable="'user.displayName'"
+        >
+          {{shift.user.displayName }}
+        </td>
+        <td
+          class="text-center"
+          data-title="'Công ty'"
+          data-filter="{'user.company.name': 'text'}"
+          sortable="'user.company.name'"
+        >
+          {{shift.user.company.name  }}
+        </td>
+        <td
+          class="text-center"
+          data-title="'Giờ bắt đầu chấm công'"
+          data-filter="{'startDate': 'text'}"
+          sortable="'startDate'"
+        >
+          {{shift.startDate | date:'HH:mm:ss dd/MM/yyyy '}}
+        </td>
+        <td
+          class="text-center"
+          data-title="'Giờ kết thúc chấm công'"
+          data-filter="{'endDate': 'text'}"
+          sortable="'endDate'"
+        >
+          {{shift.endDate | date:'HH:mm:ss dd/MM/yyyy '}}
+        </td>
+        <td
+          class="text-center"
+          data-title="'Thời gian tính công'"
+          data-filter="{'workingHour': 'number'}"
+          sortable="'workingHour'"
+        >
+          {{shift.workingHour | number:2}}
+        </td>
+        <td class="text-center" data-title="'Tác vụ'">
+          <button
+            type="button"
+            class="btn btn-primary btn-xs"
+            ui-sref="editSalaryAdvances({salaryAdvanceId: salaryAdvance._id})"
+          >
+            <i class="fa fa-pencil">Sửa</i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger btn-xs"
+            ng-click="vm.remove($index, salaryAdvance)"
+          >
+            <i class="fa fa-trash">Xóa</i>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="form-group text-center">
+    <button type="button" class="btn btn-primary" ui-sref="createSalaryAdvances">
+      Tạo chấm công mới
+    </button>
+  </div>
+</section>
