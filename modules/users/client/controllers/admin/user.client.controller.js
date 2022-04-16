@@ -53,7 +53,7 @@
 
       user.$update(function () {
         $location.path('/admin/users');
-        Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> User saved successfully!' });
+        Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Cập nhật người dùng thành công!' });
       }, function (errorResponse) {
         Notification.error({ message: errorResponse.data.message, title: '<i class="glyphicon glyphicon-remove"></i> User update error!' });
       });

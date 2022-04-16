@@ -21,12 +21,12 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right" ng-hide="vm.authentication.user">
-      <li ui-sref-active="active">
+      <!-- <li ui-sref-active="active">
         <a ui-sref="authentication.signup">Sign Up</a>
-      </li>
+      </li> -->
       <li class="divider-vertical"></li>
       <li ui-sref-active="active">
-        <a ui-sref="authentication.signin">Sign In</a>
+        <a ui-sref="authentication.signin">Đăng nhập</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right" ng-show="vm.authentication.user">
@@ -41,7 +41,7 @@
           </li>
           <li class="divider"></li>
           <li>
-            <a href="/api/auth/signout" target="_self">Signout</a>
+            <a href="/api/auth/signout" target="_self">Đăng xuất</a>
           </li>
         </ul>
       </li>

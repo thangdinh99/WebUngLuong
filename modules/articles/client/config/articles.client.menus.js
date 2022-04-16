@@ -12,19 +12,21 @@
       title: 'Thông báo',
       state: 'articles',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user','admin', 'manager']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'articles', {
       title: 'Danh sách thông báo',
       state: 'articles.list',
-      roles: ['*']
+      roles: ['user','admin', 'manager']
     });
 
     menuService.addSubMenuItem('topbar', 'articles', {
       title: 'Quản lý thông báo',
-      state: 'admin.articles.list'
+      state: 'admin.articles.list',
+      roles: ['admin','manager']
+
     });
   }
 }());

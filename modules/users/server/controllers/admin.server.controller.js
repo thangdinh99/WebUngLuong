@@ -27,7 +27,7 @@ exports.update = function (req, res) {
   user.lastName = req.body.lastName;
   user.email = req.body.email;
   user.username = req.body.username;
-  user.displayName = user.firstName + ' ' + user.lastName;
+  user.displayName = user.lastName + ' ' + user.firstName;
   user.roles = req.body.roles;
   user.company = req.body.company;
   user.salary = req.body.salary;
@@ -52,7 +52,7 @@ exports.create = function (req, res) {
   // Init user and add missing fields
   var user = new User(req.body);
   user.provider = 'local';
-  user.displayName = user.firstName + ' ' + user.lastName;
+  user.displayName = user.lastName + ' ' + user.firstName;
   user.roles = req.body.roles;
 
   // Then save the user
@@ -64,7 +64,7 @@ exports.create = function (req, res) {
     } else {
       // Remove sensitive data before login
       return res.status(200).send({
-        message: 'User created successfully',
+        message: 'Tạo người dùng thành công',
         user: user
       })
     }
