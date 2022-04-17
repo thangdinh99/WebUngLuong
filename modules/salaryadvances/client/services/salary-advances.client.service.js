@@ -10,9 +10,12 @@
     }, {
       update: {
         method: 'PUT'
-      }
+      },
+        getCurrentSalaryByShifts: {
+          method: 'GET',
+          url : '/api/getCurrentSalaryByShifts',
+        }
     });
     return SalaryAdvances;
-
   }
 }());

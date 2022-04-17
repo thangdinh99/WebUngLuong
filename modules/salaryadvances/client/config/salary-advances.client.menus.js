@@ -12,7 +12,7 @@
       title: 'Ứng lương',
       state: 'salaryAdvances',
       type: 'dropdown',
-      roles: ['admin']
+      roles: ['*']
     });
 
     // Add the dropdown list item

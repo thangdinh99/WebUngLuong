@@ -23,6 +23,9 @@ var SalaryAdvanceSchema = new Schema({
     moneyAfter : {
         type: Number,
     },
+    moneyAdvance : {
+        type: Number,
+    },
     moneyGet : {
         type: Number,
     },

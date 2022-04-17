@@ -1,9 +1,11 @@
 'use strict';
 
+const { includes } = require('lodash');
 /**
  * Module dependencies.
  */
-var config = require('../config'),
+var path=require('path'),
+  config = require('../config'),
   mongooseService = require('./mongoose'),
   express = require('./express'),
   chalk = require('chalk'),
@@ -16,25 +18,25 @@ function seedDB() {
   }
 }
 
-module.exports.init = function init(callback) {
-  mongooseService.connect(function (db) {
+module.exports.init = async function init(callback) {
+  mongooseService.connect( async function (db) {
     // Initialize Models
-    mongooseService.loadModels(seedDB);
+    await mongooseService.loadModels(seedDB);
 
     // Initialize express
-    var app = express.init(db);
+    var app = await express.init(db);
     if (callback) callback(app, db, config);
 
   });
 };
 
-module.exports.start = function start(callback) {
+module.exports.start =async function start(callback) {
   var _this = this;
 
-  _this.init(function (app, db, config) {
+    await _this.init(async function (app, db, config) {
 
     // Start the app by listening on <port> at <host>
-    app.listen(config.port, config.host, function () {
+    await app.listen(config.port, config.host, function () {
       // Create server URL
       var server = (process.env.NODE_ENV === 'secure' ? 'https://' : 'http://') + config.host + ':' + config.port;
       // Logging initialization
@@ -51,7 +53,9 @@ module.exports.start = function start(callback) {
 
       if (callback) callback(app, db, config);
     });
-
   });
+
+  // const salary = includes(path.resolve('./modules/salaryadvances/server/controllers/salary-advances.server.controller.js'))
+  // salary.getCurrentSalaryByShift()
 
 };

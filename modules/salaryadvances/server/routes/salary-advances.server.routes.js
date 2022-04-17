@@ -15,6 +15,8 @@ module.exports = function (app) {
         .put(salaryAdvances.update)
         .delete(salaryAdvances.delete);
 
-    
+    app.route('/api/getCurrentSalaryByShifts')
+        .get(salaryAdvances.getCurrentSalaryByShift);
+
     app.param('salaryAdvanceId', salaryAdvances.salaryAdvanceById);
 };
