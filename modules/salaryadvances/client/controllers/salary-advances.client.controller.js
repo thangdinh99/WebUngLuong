@@ -5,14 +5,15 @@
     .module('salaryAdvances')
     .controller('SalaryAdvancesController', SalaryAdvancesController);
 
-    SalaryAdvancesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'SalaryAdvances', 'AdminService', '$http', 'NgTableParams', "$filter", 'ConfirmModal'];
+  SalaryAdvancesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'SalaryAdvances', 'AdminService', '$http', 'NgTableParams', "$filter", 'ConfirmModal'];
 
   function SalaryAdvancesController($scope, $state, $location, Authentication, Notification, SalaryAdvances, AdminService, $http, NgTableParams, $filter, ConfirmModal) {
     const vm = this;
     vm.authentication = Authentication;
     vm.user = Authentication.user;
+    console.log(vm.user);
     vm.salaryAdvances = {};
-    $scope.$watch('vm.salaryAdvances.moneyAdvance',function(){
+    $scope.$watch('vm.salaryAdvances.moneyAdvance', function () {
       vm.salaryAdvances.moneyAdvance = parseInt(vm.salaryAdvances.moneyAdvance);
     })
     vm.init = async () => {
@@ -28,19 +29,19 @@
       });
     }
     vm.create = () => {
-      if(!vm.salaryAdvances.moneyAdvance){
+      if (!vm.salaryAdvances.moneyAdvance) {
         Notification.error({ message: 'Vui lòng nhập số tiền ứng' });
         return;
       }
-      if(vm.salaryAdvances.moneyAdvance > vm.salaryAdvances.moneyBefore){
+      if (vm.salaryAdvances.moneyAdvance > vm.salaryAdvances.moneyBefore) {
         Notification.error({ message: 'Tổng tiền trước khi ứng lương không đủ' });
         return;
       }
-      if(vm.salaryAdvances.moneyAdvance < 0){
+      if (vm.salaryAdvances.moneyAdvance < 0) {
         Notification.error({ message: 'Tổng tiền ứng lương không được âm' });
         return;
       }
-      if(vm.salaryAdvances.moneyAdvance % 10000 != 0){
+      if (vm.salaryAdvances.moneyAdvance % 10000 != 0) {
         Notification.error({ message: 'Tổng tiền ứng lương phải là bội số của 10.000' });
         return;
       }
@@ -49,7 +50,7 @@
         .$save()
         .then(() => {
           $location.path('/salaryAdvances/create')
-          Notification.success(`Tạo chấm công thành công`)
+          Notification.success(`Gửi yêu cầu ứng lương thành công`)
           // $state.reload()
         })
         .catch((err) => {
@@ -67,24 +68,31 @@
       }, (data) => {
         console.log(data);
         vm.salaryAdvances = data
-        
+
       })
     }
 
-    vm.update = () => {
-
-      vm.salaryAdvances
-        .$update()
-        .then(() => {
-          Notification.success(`Cập nhật chấm công thành công`)
-          $state.go('listSalaryAdvances')
-        })
-        .catch(
-          (err) => {
-            Notification.error({ message: err.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Có lỗi xảy ra!' });
-          }
-        )
+    vm.accept = (salaryAdvance) => {
+      ConfirmModal.show({
+        bodyText: 'Đồng ý duyệt yêu cầu ứng lương này ?',
+      }).then(() => {
+        salaryAdvance.accepted = true
+        salaryAdvance
+          .$update()
+          .then(() => {
+            Notification.success(`Chấp nhận yêu cầu ứng lương thành công`)
+            $state.reload()
+            // $state.go('listSalaryAdvances')
+          })
+          .catch(
+            (err) => {
+              Notification.error({ message: err.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Có lỗi xảy ra!' });
+            }
+          )
+      })
     }
+
+
 
     vm.remove = (index, salaryAdvance) => {
 
@@ -93,7 +101,7 @@
         salaryAdvance
           .$remove()
           .then(() => {
-            Notification.success(`Xóa chấm công thành công`)
+            Notification.success(`Hủy bỏ thành công`)
             $state.reload()
           })
           .catch(

@@ -5,9 +5,9 @@
     .module('users.admin')
     .controller('UserListController', UserListController);
 
-  UserListController.$inject = ['$scope', '$filter', 'AdminService','NgTableParams', '$http','Authentication'];
+  UserListController.$inject = ['$scope', '$filter', 'AdminService','NgTableParams', '$http','Authentication','ConfirmModal','Notification'];
 
-  function UserListController($scope, $filter, AdminService,NgTableParams, $http,Authentication) {
+  function UserListController($scope, $filter, AdminService,NgTableParams, $http,Authentication,ConfirmModal,Notification) {
     const vm = this;
     vm.user = Authentication.user
     // vm.buildPager = buildPager;
@@ -21,7 +21,22 @@
       vm.userTable = new NgTableParams({}, { dataset: vm.users});  
     });
     console.log(vm.users);
-    
+    vm.remove = (user) => {
+      ConfirmModal.show(
+        ).then(() => {
+          user
+            .$remove()
+            .then(() => {
+              Notification.success(`Xóa người dùng thành công`)
+              $state.reload()
+            })
+            .catch(
+              (err) => {
+                Notification.error({ message: err.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Có lỗi xảy ra!' });
+              }
+            )
+        })
+    }
     // function buildPager() {
     //   vm.pagedItems = [];
     //   vm.itemsPerPage = 15;

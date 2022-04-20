@@ -38,9 +38,22 @@ exports.getCurrentSalaryByShift = async function (req, res) {
   .populate('salary','salary')
   .exec()
   console.log(userWithSalary);
+  const salaryAdvancedInPast = await SalaryAdvance.aggregate()
+  .match({
+    created : { $gte: startDate.toDate(), $lte: endDate.toDate() },
+    user: user._id,
+    accepted: true
+  })
+  .group({
+    _id : '$user',
+    moneyAdvance : { $sum: '$moneyAdvance' }
+  })
+  .exec()
+  
   const currentWorkingHours = shifts[0].currentWorkingHours
   const totalWorkingHoursInMonth = businessDay * 8
-  const moneyBefore = currentWorkingHours * userWithSalary.salary.salary / totalWorkingHoursInMonth
+  const moneyBefore = (currentWorkingHours * userWithSalary.salary.salary / totalWorkingHoursInMonth) - (salaryAdvancedInPast[0] ? salaryAdvancedInPast[0].moneyAdvance : 0)
+  console.log(salaryAdvancedInPast);
   console.log(currentWorkingHours);
   console.log(totalWorkingHoursInMonth);
   console.log(moneyBefore);
@@ -59,16 +72,29 @@ exports.create =async function (req, res) {
     startMoney : { $lte: salaryAdvance.moneyAdvance },
     endMoney : { $gt: salaryAdvance.moneyAdvance }
   }).exec()
-
-  console.log(fee);
   if(!fee){
     return res.status(400).send({
       message: 'Số tiền ứng quá lớn với mức phí,vui lòng liên hệ quản lý để được hỗ trợ'
     })
   }
+  const checkSalaryAdvanceInMonth = await SalaryAdvance.aggregate()
+  .match({
+    user: req.user._id,
+    created: { $gte: moment().startOf('month').toDate(), $lte: moment().endOf('month').toDate() },
+    deleted: false,
+    accepted: false
+  })
+  .exec()
+  console.log(checkSalaryAdvanceInMonth);
+  if(checkSalaryAdvanceInMonth.length > 0){
+    console.log('123');
+    return res.status(422).send({
+      message: 'Bạn đã tạo yêu cầu rút tiền trong tháng này rồi, vui lòng liên hệ quản lý để được hỗ trợ'
+    })
+  }
   salaryAdvance.moneyFee = fee.feeMoney
   salaryAdvance.moneyGet = salaryAdvance.moneyAdvance - salaryAdvance.moneyFee
-  salaryAdvance.moneyAfter = salaryAdvance.moneyBefore - salaryAdvance.moneyFee - salaryAdvance.moneyAdvance 
+  salaryAdvance.moneyAfter = salaryAdvance.moneyBefore - salaryAdvance.moneyAdvance 
   salaryAdvance.fee = fee._id
   salaryAdvance.user = req.user
 
@@ -130,7 +156,7 @@ exports.delete = function (req, res) {
  * List of Articles
  */
 exports.list = async function (req, res) {
-  const salaryAdvances = await SalaryAdvance.find({ deleted: false })
+  const salaryAdvances = await SalaryAdvance.find()
     .sort('-created')
     .populate({
       path: 'user',
