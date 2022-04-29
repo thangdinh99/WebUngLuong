@@ -12,14 +12,14 @@
       title: 'Ứng lương',
       state: 'salaryAdvances',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user','admin','manager']
     });
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'salaryAdvances', {
       title: 'Danh sách ứng lương',
       state: 'listSalaryAdvances',
-      roles: ['*']
+      roles: ['user']
     });
     menuService.addSubMenuItem('topbar', 'salaryAdvances', {
       title: 'Thực hiện ứng lương',
