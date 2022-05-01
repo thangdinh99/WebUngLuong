@@ -10,6 +10,7 @@
   function ShiftsController($scope, $state, $location, Authentication, Notification, Shifts, AdminService, $http, NgTableParams, $filter, ConfirmModal) {
     const vm = this;
     vm.authentication = Authentication;
+    vm.user = Authentication.user;
     vm.shifts = {};
 
     vm.getAllUser = () => {
@@ -21,7 +22,9 @@
     vm.init = () => {
       Shifts.query((data) => {
         console.log(data);
-        vm.shifts = data
+        vm.shifts = _.filter(data,function(shift) {
+          return shift.user.company._id == vm.user.company
+        })
         vm.shiftTable = new NgTableParams({}, { dataset: vm.shifts })
       });
     }

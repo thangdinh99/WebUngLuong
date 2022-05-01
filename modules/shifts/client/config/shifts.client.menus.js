@@ -12,7 +12,7 @@
       title: 'Chấm công',
       state: 'shifts',
       type: 'dropdown',
-      roles: ['admin']
+      roles: ['*']
     });
 
     // Add the dropdown list item
@@ -24,7 +24,7 @@
     menuService.addSubMenuItem('topbar', 'shifts', {
       title: 'Thêm mới chấm công',
       state: 'createShifts',
-      roles: ['*']
+      roles: ['admin','manager']
     });
     
   }

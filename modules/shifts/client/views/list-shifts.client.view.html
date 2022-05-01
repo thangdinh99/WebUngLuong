@@ -57,11 +57,12 @@
         >
           {{shift.workingHour | number:2}}
         </td>
-        <td class="text-center" data-title="'Tác vụ'">
+        <td class="text-center" data-title="'Tác vụ'" >
           <button
             type="button"
             class="btn btn-primary btn-xs"
             ui-sref="editShifts({shiftId: shift._id})"
+            ng-if="vm.user.roles.includes('manager')"
           >
             <i class="fa fa-pencil">Sửa</i>
           </button>
@@ -69,6 +70,7 @@
             type="button"
             class="btn btn-danger btn-xs"
             ng-click="vm.remove($index, shift)"
+            ng-if="vm.user.roles.includes('manager')"
           >
             <i class="fa fa-trash">Xóa</i>
           </button>

@@ -7,7 +7,7 @@
       Thực hiện ứng lương,số tiền lương có thể ứng tối đa :<span
         style="color: red"
       >
-        {{ vm.salaryAdvances.moneyBefore | number : 0}} VNĐ</span
+        {{ vm.salaryAdvances.moneyBefore|| 0 | number : 0}} VNĐ</span
       >
     </h1>
   </div>
