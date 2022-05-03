@@ -91,7 +91,7 @@
             <i class="fa fa-trash">Chấp nhận</i>
           </button>
           <button
-            ng-if="!salaryAdvance.deleted && salaryAdvance.accepted == false"
+            ng-if="!salaryAdvance.deleted && salaryAdvance.accepted == false && (vm.user.roles.includes('admin') || vm.user.roles.includes('manager') || vm.user._id == salaryAdvance.user._id)"
             type="button"
             class="btn btn-danger btn-xs"
             ng-click="vm.remove($index, salaryAdvance)"

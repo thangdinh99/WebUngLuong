@@ -12,7 +12,7 @@
       title: 'Người dùng',
       state: 'admin',
       type: 'dropdown',
-      roles: ['admin']
+      roles: ['admin','manager']
     });
   }
 }());

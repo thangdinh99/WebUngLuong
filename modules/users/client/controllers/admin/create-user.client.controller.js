@@ -20,6 +20,9 @@
         vm.companies = data;
         console.log(vm.companies);
       });
+      if(!vm.authentication.user.roles.includes('admin')){
+        vm.user.company = vm.authentication.user.company;
+      }
     }
     vm.create = () => {
       if(vm.authentication.user.roles.includes('manager')){

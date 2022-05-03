@@ -56,13 +56,13 @@ var UserSchema = new Schema({
     type: String,
     trim: true,
     default: '',
-    validate: [validateLocalStrategyProperty, 'Please fill in your first name']
+    validate: [validateLocalStrategyProperty, 'Vui lòng điền tên và đệm']
   },
   lastName: {
     type: String,
     trim: true,
     default: '',
-    validate: [validateLocalStrategyProperty, 'Please fill in your last name']
+    validate: [validateLocalStrategyProperty, 'Vui lòng điền họ']
   },
   displayName: {
     type: String,
@@ -77,7 +77,7 @@ var UserSchema = new Schema({
     lowercase: true,
     trim: true,
     default: '',
-    validate: [validateLocalStrategyEmail, 'Please fill a valid email address']
+    validate: [validateLocalStrategyEmail, 'Vui lòng điền email']
   },
   address: {
     type: String,
@@ -86,8 +86,8 @@ var UserSchema = new Schema({
   },
   username: {
     type: String,
-    unique: 'Username already exists',
-    required: 'Please fill in a username',
+    unique: 'Tên đã tồn tại',
+    required: 'Vui lòng điền username',
     validate: [validateUsername, 'Please enter a valid username: 3+ characters long, non restricted word, characters "_-.", no consecutive dots, does not begin or end with dots, letters a-z and numbers 0-9.'],
     lowercase: true,
     trim: true
@@ -115,7 +115,7 @@ var UserSchema = new Schema({
       enum: ['user', 'admin', 'manager']
     }],
     default: ['user'],
-    required: 'Please provide at least one role'
+    required: 'Vui lòng chọn 1 quyền'
   },
   updated: {
     type: Date

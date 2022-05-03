@@ -81,7 +81,17 @@ exports.delete = function (req, res) {
  * List of Articles
  */
 exports.list = function (req, res) {
-  Article.find().sort('-created').populate('user', 'displayName').exec(function (err, articles) {
+  Article.find().sort('-created')
+  // .populate('user', 'displayName')
+  .populate({
+    path: 'user',
+    select: 'displayName company',
+    populate: {
+      path: 'company',
+      select: 'name'
+    }
+  })
+  .exec(function (err, articles) {
     if (err) {
       return res.status(422).send({
         message: errorHandler.getErrorMessage(err)

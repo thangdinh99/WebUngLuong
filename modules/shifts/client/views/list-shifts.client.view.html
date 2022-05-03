@@ -79,7 +79,7 @@
     </table>
   </div>
 
-  <div class="form-group text-center">
+  <div class="form-group text-center" ng-if="vm.user.roles.includes('admin') || vm.user.roles.includes('manager')">
     <button type="button" class="btn btn-primary" ui-sref="createShifts">
       Tạo chấm công mới
     </button>

@@ -22,9 +22,16 @@
     vm.init = () => {
       Shifts.query((data) => {
         console.log(data);
-        vm.shifts = _.filter(data,function(shift) {
-          return shift.user.company._id == vm.user.company
-        })
+       
+        if(!vm.user.roles.includes('admin')){
+          vm.shifts = _.filter(data,function(shift) {
+            return shift.user.company._id == vm.user.company
+          })
+        }
+        else{
+          vm.shifts = data;
+        }
+       
         vm.shiftTable = new NgTableParams({}, { dataset: vm.shifts })
       });
     }

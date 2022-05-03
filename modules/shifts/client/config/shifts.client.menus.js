@@ -12,7 +12,7 @@
       title: 'Chấm công',
       state: 'shifts',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['user', 'admin', 'manager']
     });
 
     // Add the dropdown list item
