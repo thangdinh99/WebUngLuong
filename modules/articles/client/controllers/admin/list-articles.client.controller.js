@@ -5,9 +5,9 @@
     .module('articles.admin')
     .controller('ArticlesAdminListController', ArticlesAdminListController);
 
-  ArticlesAdminListController.$inject = ['ArticlesService', '$scope', '$state', '$window', 'Authentication', 'Notification'];
+  ArticlesAdminListController.$inject = ['ArticlesService', '$scope', '$state', '$window', 'Authentication', 'Notification','NgTableParams'];
 
-  function ArticlesAdminListController(ArticlesService, $scope, $state, $window, Authentication, Notification) {
+  function ArticlesAdminListController(ArticlesService, $scope, $state, $window, Authentication, Notification,NgTableParams) {
     var vm = this;
     vm.authentication = Authentication;
     vm.user = Authentication.user;
@@ -26,6 +26,7 @@
         })
         vm.articles = vm.articlesAdmin.concat(vm.articlesInCompany)
       }
+      vm.articleTable = new NgTableParams({}, { dataset: vm.articles })
     });
     // console.log(vm.articles);
     // console.log(vm.user);
