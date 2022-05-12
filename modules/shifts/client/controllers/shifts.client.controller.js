@@ -22,16 +22,16 @@
     vm.init = () => {
       Shifts.query((data) => {
         console.log(data);
-       
-        if(!vm.user.roles.includes('admin')){
-          vm.shifts = _.filter(data,function(shift) {
+
+        if (!vm.user.roles.includes('admin')) {
+          vm.shifts = _.filter(data, function (shift) {
             return shift.user.company._id == vm.user.company
           })
         }
-        else{
+        else {
           vm.shifts = data;
         }
-       
+
         vm.shiftTable = new NgTableParams({}, { dataset: vm.shifts })
       });
     }
@@ -65,7 +65,7 @@
       }, (data) => {
         console.log(data);
         vm.shifts = data
-        vm.shifts.startDate =new Date(data.startDate)
+        vm.shifts.startDate = new Date(data.startDate)
         vm.shifts.endDate = new Date(data.endDate)
         vm.shifts.user = data.user._id
       })

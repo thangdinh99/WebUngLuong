@@ -33,7 +33,7 @@
     <div class="col-sm-10">
       <select ng-model="vm.shifts.user" class="form-control">
         <option value="" disabled>Chọn nhân viên</option>
-        <option ng-repeat="user in vm.users" ng-value="user._id" >{{user.displayName}} - {{user.company.name}}</option>
+        <option ng-if="vm.user.company == user.company._id || vm.user.roles.includes('admin')" ng-repeat="user in vm.users" ng-value="user._id" >{{user.displayName}} - {{user.company.name}}</option>
       </select>
     </div>
   </div>

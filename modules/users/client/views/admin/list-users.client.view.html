@@ -53,6 +53,7 @@
             type="button"
             class="btn btn-primary btn-xs"
             ui-sref="admin.user-edit({userId: user._id})"
+            ng-if="vm.user.company == user.company._id || vm.user.roles.includes('admin')"
           >
             <i class="glyphicon glyphicon-pencil">Sửa</i>
           </button>
@@ -60,6 +61,7 @@
             type="button"
             class="btn btn-danger btn-xs"
             ng-click="vm.remove(user)"
+            ng-if="vm.user.company == user.company._id || vm.user.roles.includes('admin')"
           >
             <i class="glyphicon glyphicon-trash">Xóa</i>
           </button>
