@@ -35,7 +35,7 @@
         class="form-control"
         placeholder="Điền số tiền muốn ứng"
         ng-model="vm.salaryAdvances.moneyAdvance"
-
+        ng-disabled = "vm.salaryAdvances.moneyBefore == 0 || !vm.salaryAdvances.moneyBefore"
       />
     </div>
     <div class="col-sm-5">

@@ -17,6 +17,9 @@
     AdminService.query(function (data) {
       
       vm.users = data;
+      _.forEach(vm.users, function(user){
+        user.joinRoles = _.join(user.roles,', ');
+      });
       console.log(vm.users);
       vm.userTable = new NgTableParams({}, { dataset: vm.users});  
     });

@@ -65,7 +65,6 @@ exports.getCurrentSalaryByShift = async function (req, res) {
 
 exports.create =async function (req, res) {
 
-
   const salaryAdvance = new SalaryAdvance(req.body);
   const fee =await Fee.findOne({
     deleted: false,
@@ -97,7 +96,7 @@ exports.create =async function (req, res) {
   salaryAdvance.moneyAfter = salaryAdvance.moneyBefore - salaryAdvance.moneyAdvance 
   salaryAdvance.fee = fee._id
   salaryAdvance.user = req.user
-
+  console.log(salaryAdvance);
   salaryAdvance.save(function (err) {
     if (err) {
       return res.status(422).send({

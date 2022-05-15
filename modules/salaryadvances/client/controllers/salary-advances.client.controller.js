@@ -40,6 +40,7 @@
     vm.getMoneyBefore = async () => {
       await SalaryAdvances.getCurrentSalaryByShifts().$promise.then((response) => {
         vm.salaryAdvances.moneyBefore = response.moneyBefore
+        console.log(vm.salaryAdvances.moneyBefore);
       });
     }
     vm.create = () => {
