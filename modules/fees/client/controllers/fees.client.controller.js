@@ -10,6 +10,7 @@
   function FeesController($scope, $state, $location, Authentication, Notification, Fees, $http, NgTableParams, $filter, ConfirmModal) {
     const vm = this;
     vm.authentication = Authentication;
+    vm.user = Authentication.user;
     vm.fees = {};
     vm.init = () => {
       Fees.query((data) => {

@@ -17,11 +17,25 @@
       vm.salaryAdvances.moneyAdvance = parseInt(vm.salaryAdvances.moneyAdvance);
     })
     vm.init = async () => {
-      SalaryAdvances.query((data) => {
-        console.log(data);
-        vm.salaryAdvances = data
+      vm.salaryAdvances = SalaryAdvances.query()
+      vm.salaryAdvances.$promise.then(function (data) {
+        if (vm.user.roles.includes('admin')) {
+          vm.salaryAdvances = data;
+        }
+        else {
+          vm.salaryAdvances = _.filter(data,(salaryAdvance)=>{
+            return salaryAdvance.user.company && (salaryAdvance.user.company._id == vm.user.company)
+          })
+        }
         vm.salaryAdvanceTable = new NgTableParams({}, { dataset: vm.salaryAdvances })
       });
+        
+      // SalaryAdvances.query((data) => {
+      //   console.log(data);
+      //   vm.salaryAdvances = data
+      //   vm.salaryAdvanceTable = new NgTableParams({}, { dataset: vm.salaryAdvances })
+      // });
+
     }
     vm.getMoneyBefore = async () => {
       await SalaryAdvances.getCurrentSalaryByShifts().$promise.then((response) => {

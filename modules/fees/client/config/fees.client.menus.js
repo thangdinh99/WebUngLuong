@@ -12,7 +12,7 @@
       title: 'Phí ứng',
       state: 'fees',
       type: 'dropdown',
-      roles: ['admin']
+      roles: ['admin', 'manager', 'user']
     });
 
     // Add the dropdown list item
@@ -24,7 +24,7 @@
     menuService.addSubMenuItem('topbar', 'fees', {
       title: 'Thêm mới phí ứng',
       state: 'createFees',
-      roles: ['*']
+      roles: ['admin']
     });
     
   }

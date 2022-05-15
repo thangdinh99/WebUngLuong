@@ -55,7 +55,7 @@ module.exports.start =async function start(callback) {
     });
   });
 
-  const salary = includes(path.resolve('./modules/salaryadvances/server/controllers/salary-advances.server.controller.js'))
-  salary.getCurrentSalaryByShift()
+  // const salary = includes(path.resolve('./modules/salaryadvances/server/controllers/salary-advances.server.controller.js'))
+  // salary.getCurrentSalaryByShift()
 
 };
