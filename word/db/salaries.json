@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "6252af4e198f9151c0924b52"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "salary": 5000000,
+  "title": "Nhân viên thử việc",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252af56198f9151c0924b53"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "salary": 8000000,
+  "title": "Nhân viên fresher",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252af63198f9151c0924b54"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "salary": 10000000,
+  "title": "Nhân viên Junior 1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252af6d198f9151c0924b55"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "salary": 12000000,
+  "title": "Nhân viên Junior 2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252af7a198f9151c0924b56"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "salary": 18000000,
+  "title": "Nhân viên middle",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252af82198f9151c0924b57"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "salary": 25000000,
+  "title": "Nhân viên senior",
+  "__v": 0
+}]

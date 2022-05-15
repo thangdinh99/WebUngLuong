@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "6245ccf48dfc8a3660b02ae9"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "content": "This is a seeded Article for the development environment",
+  "title": "First Article",
+  "created": {
+    "$date": {
+      "$numberLong": "1648741620725"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6251b2437c516440180e154f"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "content": "Tesst nooji dung",
+  "title": "Title 1",
+  "created": {
+    "$date": {
+      "$numberLong": "1649521219443"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f919d50061930c887c19d"
+  },
+  "user": {
+    "$oid": "624923767d57b714486c32b8"
+  },
+  "content": "Đây là 1 thông báo mới của công ty newman",
+  "title": "Công ty newman",
+  "created": {
+    "$date": {
+      "$numberLong": "1651478941351"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62709f42a73a0a4de8a9481a"
+  },
+  "user": {
+    "$oid": "6249266b25a1a11890c17e7e"
+  },
+  "content": "Đây là 1 thông báo của Abby2",
+  "title": "Công ty Abby",
+  "created": {
+    "$date": {
+      "$numberLong": "1651547970774"
+    }
+  },
+  "__v": 0
+}]

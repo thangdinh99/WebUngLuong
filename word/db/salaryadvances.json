@@ -1,0 +1,106 @@
+[{
+  "_id": {
+    "$oid": "626f56bdaa68cb476c7b26b7"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "fee": {
+    "$oid": "6252aece198f9151c0924b4e"
+  },
+  "moneyAfter": 4445454.545454546,
+  "moneyGet": 90000,
+  "moneyFee": 10000,
+  "moneyAdvance": 100000,
+  "moneyBefore": 4545454.545454546,
+  "deleted": false,
+  "accepted": true,
+  "created": {
+    "$date": "2022-05-02T03:57:49.358Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f8bf82fbf5547fc3590d2"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "fee": {
+    "$oid": "6252aece198f9151c0924b4e"
+  },
+  "moneyAfter": 4345454.545454546,
+  "moneyGet": 90000,
+  "moneyFee": 10000,
+  "moneyAdvance": 100000,
+  "moneyBefore": 4445454.545454546,
+  "deleted": false,
+  "accepted": true,
+  "created": {
+    "$date": "2022-05-02T07:44:56.871Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807adfd9d6ef399cb1fdd1"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "fee": {
+    "$oid": "6252aed8198f9151c0924b4f"
+  },
+  "moneyAfter": 7181818.181818182,
+  "moneyGet": 980000,
+  "moneyFee": 20000,
+  "moneyAdvance": 1000000,
+  "moneyBefore": 8181818.181818182,
+  "deleted": false,
+  "accepted": false,
+  "created": {
+    "$date": "2022-05-15T04:00:31.659Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807b06d9d6ef399cb1fdd2"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "fee": {
+    "$oid": "6252aed8198f9151c0924b4f"
+  },
+  "moneyAfter": 2845454.545454546,
+  "moneyGet": 1480000,
+  "moneyFee": 20000,
+  "moneyAdvance": 1500000,
+  "moneyBefore": 4345454.545454546,
+  "deleted": false,
+  "accepted": false,
+  "created": {
+    "$date": "2022-05-15T04:01:10.728Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807baed9d6ef399cb1fdd3"
+  },
+  "user": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "fee": {
+    "$oid": "6252aece198f9151c0924b4e"
+  },
+  "moneyAfter": 1618181.8181818181,
+  "moneyGet": 190000,
+  "moneyFee": 10000,
+  "moneyAdvance": 200000,
+  "moneyBefore": 1818181.8181818181,
+  "deleted": false,
+  "accepted": false,
+  "created": {
+    "$date": "2022-05-15T04:03:58.447Z"
+  },
+  "__v": 0
+}]

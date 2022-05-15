@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "6252aece198f9151c0924b4e"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "startMoney": 100000,
+  "endMoney": 1000000,
+  "feeMoney": 10000,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-10T10:17:50.643Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252aed8198f9151c0924b4f"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "startMoney": 1000000,
+  "endMoney": 5000000,
+  "feeMoney": 20000,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-10T10:18:00.921Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252aeea198f9151c0924b50"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "startMoney": 5000000,
+  "endMoney": 10000000,
+  "feeMoney": 30000,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-10T10:18:18.926Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6252af1c198f9151c0924b51"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "startMoney": 10000000,
+  "endMoney": 20000000,
+  "feeMoney": 50000,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-10T10:19:08.774Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625fb6042c39ab4f0c64ca78"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "startMoney": 10000,
+  "endMoney": 100000,
+  "feeMoney": 5000,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-20T07:28:04.483Z"
+  },
+  "__v": 0
+}]

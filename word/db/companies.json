@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "6247f730d9bb175d387de5c8"
+  },
+  "deleted": false,
+  "active": true,
+  "phone": "122345678",
+  "address": "Cầu Giấy",
+  "code": "SAVOR",
+  "name": "Công ty TNHH SAVOR",
+  "created": {
+    "$date": "2022-04-02T07:11:44.790Z"
+  },
+  "__v": 0,
+  "retireHour": 1.5
+},{
+  "_id": {
+    "$oid": "6247faa7b8eb4a28dca377e4"
+  },
+  "deleted": false,
+  "active": true,
+  "phone": "1231546",
+  "address": "Đống Đa Hà Nội",
+  "code": "ABBY",
+  "name": "Công ty ABBY",
+  "created": {
+    "$date": "2022-04-02T07:26:31.166Z"
+  },
+  "__v": 0,
+  "retireHour": 1
+},{
+  "_id": {
+    "$oid": "6247fb1e4c544b52487fe8f0"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "active": true,
+  "phone": 15641233123,
+  "address": "Khánh Hòa2",
+  "code": "HATIEN2",
+  "name": "Công ty TNHH Hà Tiên1",
+  "created": {
+    "$date": "2022-04-02T07:28:30.698Z"
+  },
+  "__v": 0,
+  "retireHour": 1
+},{
+  "_id": {
+    "$oid": "62519fce2dc93550403b07a6"
+  },
+  "user": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "deleted": false,
+  "active": true,
+  "phone": 15141200,
+  "address": "Phú Thọ",
+  "code": "NEWMAN",
+  "name": "Công ty TNHH NewMan",
+  "created": {
+    "$date": "2022-04-09T15:01:34.138Z"
+  },
+  "__v": 0,
+  "retireHour": 1.5
+}]

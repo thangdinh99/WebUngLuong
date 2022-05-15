@@ -1,0 +1,329 @@
+[{
+  "_id": {
+    "$oid": "6245ccf48dfc8a3660b02ae8"
+  },
+  "salt": "",
+  "displayName": "User Local",
+  "provider": "local",
+  "username": "local-user",
+  "created": {
+    "$date": "2022-03-31T15:47:00.701Z"
+  },
+  "roles": [
+    "user"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "email": "user@localhost.com",
+  "lastName": "Local",
+  "firstName": "User",
+  "__v": 0,
+  "active": true,
+  "address": "",
+  "company": {
+    "$oid": "6247faa7b8eb4a28dca377e4"
+  },
+  "phone": 0,
+  "salary": {
+    "$oid": "6252af7a198f9151c0924b56"
+  },
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "6245ccf48dfc8a3660b02ae7"
+  },
+  "salt": "",
+  "displayName": "Admin Local",
+  "provider": "local",
+  "username": "local-admin",
+  "created": {
+    "$date": "2022-03-31T15:47:00.677Z"
+  },
+  "roles": [
+    "admin",
+    "user",
+    "manager"
+  ],
+  "profileImageURL": "/modules\\users\\client\\img\\profile\\uploads\\10719ef366fd583e4b6f4e707b7d622d",
+  "password": "1",
+  "email": "admin@localhost.com",
+  "lastName": "Local",
+  "firstName": "Admin",
+  "__v": 0,
+  "active": true,
+  "deleted": false
+},{
+  "_id": {
+    "$oid": "624923767d57b714486c32b8"
+  },
+  "salt": "",
+  "displayName": "Đinh Quốc Thắng",
+  "provider": "local",
+  "username": "dinhquocthang",
+  "company": {
+    "$oid": "62519fce2dc93550403b07a6"
+  },
+  "phone": 1213,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-03T04:32:54.481Z"
+  },
+  "roles": [
+    "user",
+    "manager"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Khâm Thiên",
+  "email": "thangzjm2504@gmail.com",
+  "lastName": "Đinh",
+  "firstName": "Quốc Thắng",
+  "__v": 0,
+  "salary": {
+    "$oid": "6252af6d198f9151c0924b55"
+  }
+},{
+  "_id": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "salt": "71fpYnTJ85NvfzuwvC69wA==",
+  "displayName": "Đỗ Việt Anh",
+  "provider": "local",
+  "username": "dovietanh",
+  "company": {
+    "$oid": "6247fb1e4c544b52487fe8f0"
+  },
+  "phone": 231654,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-03T04:41:15.152Z"
+  },
+  "roles": [
+    "user",
+    "manager"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "Xg5iKHbCu2YfRwRbF7Ndqj5qI9nm8HZhQT+GWPKxxLShHGGbr+Y0jsObx3QSiEblyLaVHwKaDhL1g9R6rusD9Q==",
+  "address": "Ninh Bìnnh",
+  "email": "vietanh@gmail.com",
+  "lastName": "Đỗ",
+  "firstName": "Việt Anh",
+  "__v": 0,
+  "salary": {
+    "$oid": "6252af6d198f9151c0924b55"
+  }
+},{
+  "_id": {
+    "$oid": "6249266b25a1a11890c17e7e"
+  },
+  "salt": "",
+  "displayName": "Cao Minh Đức",
+  "provider": "local",
+  "username": "caominhduc",
+  "company": {
+    "$oid": "6247faa7b8eb4a28dca377e4"
+  },
+  "phone": 2315643,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-03T04:45:31.055Z"
+  },
+  "roles": [
+    "user",
+    "manager"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Hà Nội",
+  "email": "caominhduc@gmail.com",
+  "lastName": "Cao",
+  "firstName": "Minh Đức",
+  "__v": 0,
+  "salary": {
+    "$oid": "6252af63198f9151c0924b54"
+  }
+},{
+  "_id": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "salt": "",
+  "displayName": "Lê Quang Thành",
+  "provider": "local",
+  "username": "lequangthanh",
+  "company": {
+    "$oid": "6247f730d9bb175d387de5c8"
+  },
+  "phone": 2165421222,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-04-03T08:57:34.600Z"
+  },
+  "roles": [
+    "user",
+    "manager"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Hà Nội 2",
+  "email": "lequangthanh@gmail.com",
+  "lastName": "Lê",
+  "firstName": "Quang Thành",
+  "__v": 2,
+  "salary": {
+    "$oid": "6252af63198f9151c0924b54"
+  }
+},{
+  "_id": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "salt": "",
+  "displayName": "Nguyễn Tiến Luật",
+  "provider": "local",
+  "username": "nguyentienluat",
+  "company": {
+    "$oid": "62519fce2dc93550403b07a6"
+  },
+  "salary": {
+    "$oid": "6252af56198f9151c0924b53"
+  },
+  "phone": 1321543215,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-05-02T03:36:15.651Z"
+  },
+  "roles": [
+    "user"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Hà Nội",
+  "email": "nguyentienluat@gmail.com",
+  "lastName": "Nguyễn",
+  "firstName": "Tiến Luật",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "salt": "",
+  "displayName": "Vũ Thu Trang",
+  "provider": "local",
+  "username": "vuthutrang",
+  "company": {
+    "$oid": "62519fce2dc93550403b07a6"
+  },
+  "salary": {
+    "$oid": "6252af63198f9151c0924b54"
+  },
+  "phone": 21564513218,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-05-02T03:37:14.085Z"
+  },
+  "roles": [
+    "user"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Hà Nội",
+  "email": "vuthutrang@gmail.com",
+  "lastName": "Vũ",
+  "firstName": "Thu Trang",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "salt": "",
+  "displayName": "Nguyễn Hoàng Hiệp",
+  "provider": "local",
+  "username": "nguyenhoanghiep",
+  "company": {
+    "$oid": "6247f730d9bb175d387de5c8"
+  },
+  "salary": {
+    "$oid": "6252af7a198f9151c0924b56"
+  },
+  "phone": 15641321554,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-05-02T03:39:35.214Z"
+  },
+  "roles": [
+    "user"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Hà Nam",
+  "email": "nguyenhoanghiep@gmail.com",
+  "lastName": "Nguyễn",
+  "firstName": "Hoàng Hiệp",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6280735db7cfe648484c4e6d"
+  },
+  "salt": "",
+  "displayName": "Vũ Thu Trang 1",
+  "provider": "local",
+  "username": "vuthutrang1",
+  "company": {
+    "$oid": "62519fce2dc93550403b07a6"
+  },
+  "salary": {
+    "$oid": "6252af82198f9151c0924b57"
+  },
+  "phone": 154132485465,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-05-15T03:28:29.093Z"
+  },
+  "roles": [
+    "user"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Ninh Bình",
+  "email": "vuthutrang1@gmail.com",
+  "lastName": "Vũ",
+  "firstName": "Thu Trang 1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6280772bb7cfe648484c4e6e"
+  },
+  "salt": "",
+  "displayName": "Vũ Thu Trang 2",
+  "provider": "local",
+  "username": "vuthutrang2",
+  "company": {
+    "$oid": "62519fce2dc93550403b07a6"
+  },
+  "salary": {
+    "$oid": "6252af63198f9151c0924b54"
+  },
+  "phone": 3215321321,
+  "active": true,
+  "deleted": false,
+  "created": {
+    "$date": "2022-05-15T03:44:43.038Z"
+  },
+  "roles": [
+    "user"
+  ],
+  "profileImageURL": "/modules/users/client/img/profile/default.png",
+  "password": "1",
+  "address": "Hồ Chí Minh",
+  "email": "vuthutrang2@gmail.com",
+  "lastName": "Vũ",
+  "firstName": "Thu Trang 2",
+  "__v": 0
+}]

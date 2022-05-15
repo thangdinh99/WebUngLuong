@@ -1,0 +1,761 @@
+[{
+  "_id": {
+    "$oid": "625405071e06072b188618f5"
+  },
+  "startDate": {
+    "$date": "2022-04-11T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-11T09:00:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 6.5,
+  "created": {
+    "$date": "2022-04-11T10:37:59.499Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625412811e06072b188618f6"
+  },
+  "startDate": {
+    "$date": "2022-04-11T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-11T09:40:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 7.166666666666666,
+  "created": {
+    "$date": "2022-04-11T11:35:29.790Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad7dd8ef7ca304cd38692"
+  },
+  "startDate": {
+    "$date": "2022-04-15T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-15T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:09.468Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad7e88ef7ca304cd38693"
+  },
+  "startDate": {
+    "$date": "2022-04-18T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-18T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:20.290Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad7ec8ef7ca304cd38694"
+  },
+  "startDate": {
+    "$date": "2022-04-19T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-19T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:24.979Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad7f18ef7ca304cd38695"
+  },
+  "startDate": {
+    "$date": "2022-04-20T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-20T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:29.573Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad7f68ef7ca304cd38696"
+  },
+  "startDate": {
+    "$date": "2022-04-21T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-21T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:34.302Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad8058ef7ca304cd38697"
+  },
+  "startDate": {
+    "$date": "2022-04-22T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-22T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:49.669Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad80b8ef7ca304cd38698"
+  },
+  "startDate": {
+    "$date": "2022-04-01T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-01T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249617e95b38b62ec757507"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:51:55.199Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad82a8ef7ca304cd38699"
+  },
+  "startDate": {
+    "$date": "2022-04-01T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-01T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:52:26.696Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad8398ef7ca304cd3869a"
+  },
+  "startDate": {
+    "$date": "2022-04-04T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-04T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:52:41.471Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad83d8ef7ca304cd3869b"
+  },
+  "startDate": {
+    "$date": "2022-04-05T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-05T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:52:45.874Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad8418ef7ca304cd3869c"
+  },
+  "startDate": {
+    "$date": "2022-04-06T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-06T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:52:49.898Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad8468ef7ca304cd3869d"
+  },
+  "startDate": {
+    "$date": "2022-04-07T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-07T11:52:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:52:54.059Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "625ad84a8ef7ca304cd3869e"
+  },
+  "startDate": {
+    "$date": "2022-04-08T00:52:00Z"
+  },
+  "endDate": {
+    "$date": "2022-04-08T11:53:00Z"
+  },
+  "user": {
+    "$oid": "6249256b128ce44158918326"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-04-16T14:52:58.336Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f553caa68cb476c7b26a8"
+  },
+  "startDate": {
+    "$date": "2022-05-02T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-02T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:24.927Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5543aa68cb476c7b26a9"
+  },
+  "startDate": {
+    "$date": "2022-05-03T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-03T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:31.074Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5545aa68cb476c7b26aa"
+  },
+  "startDate": {
+    "$date": "2022-05-04T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-04T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:33.556Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5547aa68cb476c7b26ab"
+  },
+  "startDate": {
+    "$date": "2022-05-05T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-05T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:35.807Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f554eaa68cb476c7b26ac"
+  },
+  "startDate": {
+    "$date": "2022-05-06T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-06T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:42.402Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f555aaa68cb476c7b26ad"
+  },
+  "startDate": {
+    "$date": "2022-05-09T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-09T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:54.270Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f555daa68cb476c7b26ae"
+  },
+  "startDate": {
+    "$date": "2022-05-10T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-10T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:51:57.706Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5560aa68cb476c7b26af"
+  },
+  "startDate": {
+    "$date": "2022-05-11T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-11T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:52:00.087Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5562aa68cb476c7b26b0"
+  },
+  "startDate": {
+    "$date": "2022-05-12T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-12T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:52:02.175Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f5565aa68cb476c7b26b1"
+  },
+  "startDate": {
+    "$date": "2022-05-13T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-13T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51eaaa68cb476c7b26a1"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:52:05.088Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f55deaa68cb476c7b26b2"
+  },
+  "startDate": {
+    "$date": "2022-05-02T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-02T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:54:06.843Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f55ecaa68cb476c7b26b3"
+  },
+  "startDate": {
+    "$date": "2022-05-03T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-03T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:54:20.559Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f55efaa68cb476c7b26b4"
+  },
+  "startDate": {
+    "$date": "2022-05-04T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-04T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:54:23.007Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f55f1aa68cb476c7b26b5"
+  },
+  "startDate": {
+    "$date": "2022-05-05T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-05T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:54:25.190Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "626f55f4aa68cb476c7b26b6"
+  },
+  "startDate": {
+    "$date": "2022-05-06T00:50:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-06T12:51:00Z"
+  },
+  "user": {
+    "$oid": "626f51afaa68cb476c7b26a0"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-02T03:54:28.610Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807a8ad9d6ef399cb1fdc7"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-02T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-02T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:06.513Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807a8ed9d6ef399cb1fdc8"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-03T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-03T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:10.436Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807a90d9d6ef399cb1fdc9"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-04T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-04T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:12.481Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807a92d9d6ef399cb1fdca"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-05T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-05T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:14.969Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807a95d9d6ef399cb1fdcb"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-06T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-06T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:17.774Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807aa1d9d6ef399cb1fdcc"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-09T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-09T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:29.328Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807aa5d9d6ef399cb1fdcd"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-10T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-10T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:33.993Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807aa9d9d6ef399cb1fdce"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-11T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-11T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:37.524Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807aabd9d6ef399cb1fdcf"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-12T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-12T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:39.831Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62807aaed9d6ef399cb1fdd0"
+  },
+  "user": {
+    "$oid": "626f5277aa68cb476c7b26a2"
+  },
+  "startDate": {
+    "$date": "2022-05-13T01:00:00Z"
+  },
+  "endDate": {
+    "$date": "2022-05-13T11:58:00Z"
+  },
+  "deleted": false,
+  "workingHour": 8,
+  "created": {
+    "$date": "2022-05-15T03:59:42.401Z"
+  },
+  "__v": 0
+}]
