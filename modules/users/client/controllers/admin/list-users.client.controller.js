@@ -5,9 +5,9 @@
     .module('users.admin')
     .controller('UserListController', UserListController);
 
-  UserListController.$inject = ['$scope', '$filter', 'AdminService','NgTableParams', '$http','Authentication','ConfirmModal','Notification'];
+  UserListController.$inject = ['$scope','$state', '$filter', 'AdminService','NgTableParams', '$http','Authentication','ConfirmModal','Notification'];
 
-  function UserListController($scope, $filter, AdminService,NgTableParams, $http,Authentication,ConfirmModal,Notification) {
+  function UserListController($scope,$state, $filter, AdminService,NgTableParams, $http,Authentication,ConfirmModal,Notification) {
     const vm = this;
     vm.user = Authentication.user
     // vm.buildPager = buildPager;
