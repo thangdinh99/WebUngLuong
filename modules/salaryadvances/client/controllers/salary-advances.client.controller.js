@@ -5,9 +5,9 @@
     .module('salaryAdvances')
     .controller('SalaryAdvancesController', SalaryAdvancesController);
 
-  SalaryAdvancesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'SalaryAdvances', 'AdminService', '$http', 'NgTableParams', "$filter", 'ConfirmModal'];
+  SalaryAdvancesController.$inject = ['$scope', '$state', '$location', 'Authentication', 'Notification', 'SalaryAdvances','Salaries', 'AdminService', '$http', 'NgTableParams', "$filter", 'ConfirmModal'];
 
-  function SalaryAdvancesController($scope, $state, $location, Authentication, Notification, SalaryAdvances, AdminService, $http, NgTableParams, $filter, ConfirmModal) {
+  function SalaryAdvancesController($scope, $state, $location, Authentication, Notification, SalaryAdvances,Salaries, AdminService, $http, NgTableParams, $filter, ConfirmModal) {
     const vm = this;
     vm.authentication = Authentication;
     vm.user = Authentication.user;
@@ -36,6 +36,14 @@
       //   vm.salaryAdvanceTable = new NgTableParams({}, { dataset: vm.salaryAdvances })
       // });
 
+    }
+    vm.getSalary = async () =>{
+      Salaries.get({
+        salaryId: vm.user.salary
+      }, (data) => {
+        vm.currentSalary = data.salary
+        console.log(vm.currentSalary);
+      })
     }
     vm.getMoneyBefore = async () => {
       await SalaryAdvances.getCurrentSalaryByShifts().$promise.then((response) => {

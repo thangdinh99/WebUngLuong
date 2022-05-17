@@ -1,6 +1,6 @@
 <section
   ng-controller="SalaryAdvancesController as vm"
-  ng-init="vm.getMoneyBefore()"
+  ng-init="vm.getMoneyBefore(); vm.getSalary()"
 >
   <div class="page-header">
     <h1>
@@ -8,6 +8,13 @@
         style="color: red"
       >
         {{ vm.salaryAdvances.moneyBefore|| 0 | number : 0}} VNĐ</span
+      >
+    </h1>
+    <h1>
+      Số tiền lương của tháng này :<span
+        style="color: red"
+      >
+        {{ vm.currentSalary|| 0 | number : 0}} VNĐ</span
       >
     </h1>
   </div>
