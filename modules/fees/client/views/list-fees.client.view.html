@@ -21,7 +21,7 @@
           data-filter="{'startMoney': 'number'}"
           sortable="'startMoney'"
         >
-          {{fee.startMoney | number  }}
+          {{fee.startMoney | number }}
         </td>
         <td
           class="text-center"
@@ -61,7 +61,7 @@
     </table>
   </div>
 
-  <div class="form-group text-center">
+  <div class="form-group text-center" ng-if="vm.user.roles.includes('admin')">
     <button type="button" class="btn btn-primary" ui-sref="createFees">
       Tạo phí ứng lương mới
     </button>
